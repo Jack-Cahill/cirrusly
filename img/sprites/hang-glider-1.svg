@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 170">
+<!-- F1: detailed soft-3D hang glider, side view -->
+<defs>
+  <linearGradient id="f1-far" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0" stop-color="#9d8bff"/><stop offset="1" stop-color="#6a52e0"/></linearGradient>
+  <linearGradient id="f1-near" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#d3c8ff"/><stop offset="1" stop-color="#9c87ff"/></linearGradient>
+  <linearGradient id="f1-pod" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc26b"/><stop offset="1" stop-color="#f28a32"/></linearGradient>
+  <linearGradient id="f1-tube" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9edf5"/><stop offset="1" stop-color="#9aa3bd"/></linearGradient>
+  <radialGradient id="f1-helmet" cx="0.3" cy="0.25" r="0.85"><stop offset="0" stop-color="#86e6d6"/><stop offset="1" stop-color="#1fa892"/></radialGradient>
+  <radialGradient id="f1-skin" cx="0.35" cy="0.35" r="0.8"><stop offset="0" stop-color="#ffe0c7"/><stop offset="1" stop-color="#eaa77f"/></radialGradient>
+  <clipPath id="f1-nearclip"><path id="f1-nearpath" d="M234.0,64.0 30.0,102.0 Q38.0,95.0 49.0,93.0 Q57.0,86.0 68.0,84.0 Q76.0,77.0 87.0,75.0 Q95.0,68.0 106.0,66.0 Z"/></clipPath>
+</defs>
+<path d="M158.0,42.0 L234.0,64.0 M158.0,42.0 L106.0,66.0 M158.0,42.0 L94.0,20.0" stroke="#cdd4e4" stroke-width="1.2" fill="none"/>
+<path d="M156.0,64.0 L158.0,42.0" stroke="url(#f1-tube)" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M234.0,64.0 L94.0,20.0  Q93.0,26.8 97.0,31.5 Q96.0,38.2 100.0,43.0 Q99.0,49.8 103.0,54.5 Q102.0,61.2 106.0,66.0 Z" fill="url(#f1-far)"/>
+<path d="M97.0,31.5 L124.8,29.7" stroke="#fff" stroke-opacity="0.28" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M100.0,43.0 L164.0,42.0" stroke="#fff" stroke-opacity="0.28" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M103.0,54.5 L200.4,53.4" stroke="#fff" stroke-opacity="0.28" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M234.0,64.0 L30.0,102.0  Q38.0,95.0 49.0,93.0 Q57.0,86.0 68.0,84.0 Q76.0,77.0 87.0,75.0 Q95.0,68.0 106.0,66.0 Z" fill="url(#f1-near)"/>
+<path d="M49.0,93.0 L70.8,94.4" stroke="#fff" stroke-opacity="0.35" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M68.0,84.0 L123.8,84.5" stroke="#fff" stroke-opacity="0.35" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M87.0,75.0 L176.9,74.6" stroke="#fff" stroke-opacity="0.35" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M234.0,64.0 L30.0,102.0" stroke="#5a43cf" stroke-width="5" stroke-linecap="round"/>
+<path d="M223.8,65.9 L91.2,90.6" stroke="#fff" stroke-opacity="0.55" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M234.0,64.0 L94.0,20.0" stroke="#4c37b8" stroke-width="4" stroke-linecap="round"/>
+<path d="M234.0,64.0 L106.0,66.0" stroke="url(#f1-tube)" stroke-width="3" stroke-linecap="round"/>
+<path d="M142.0,138.0 L30.0,102.0 M192.0,138.0 L234.0,64.0 M192.0,138.0 L30.0,102.0" stroke="#dfe4ef" stroke-width="1" fill="none" opacity="0.9"/>
+<path d="M162.0,67.0 L142.0,138.0 M162.0,67.0 L192.0,138.0 M138.0,138.0 L196.0,138.0" stroke="url(#f1-tube)" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+<path d="M150.0,66.0 L150.0,114.0" stroke="#6b728c" stroke-width="2" stroke-linecap="round"/>
+<path d="M168,120 Q176,132 183,137" stroke="#f28a32" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M178,115 Q184,128 170,132 L104,131 Q88,128 90,121 Q96,111 112,111 L166,109 Q174,109 178,115 Z" fill="url(#f1-pod)"/>
+<path d="M108,115 Q133.0,112 164,114" stroke="#fff" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M102,126 L162,127" stroke="#b85f16" stroke-width="1.4" stroke-dasharray="2 2"/>
+<rect x="142" y="127" width="20" height="9" rx="4" fill="#2fb3a2"/>
+<path d="M172,118 Q182,130 188,137" stroke="#ffc26b" stroke-width="7" stroke-linecap="round" fill="none"/>
+<circle cx="188" cy="137" r="3.5" fill="#3b4260"/>
+<ellipse cx="192" cy="115" rx="10.125" ry="9.45" fill="url(#f1-skin)"/>
+<path d="M175.5,113 Q175.5,97.5 191,97.5 Q204.5,98.5 203.5,112 L199.5,114 Z" fill="url(#f1-helmet)"/>
+<path d="M191,110 L204.5,110 Q204.5,116 199.5,117 L192,116 Z" fill="#2c3553"/>
+<path d="M194,112 L201.5,112" stroke="#fff" stroke-opacity="0.7" stroke-width="1.4" stroke-linecap="round"/>
+<ellipse cx="184.275" cy="103.575" rx="4.725" ry="2.4299999999999997" fill="#fff" opacity="0.55" transform="rotate(-18 184.275 103.575)"/>
+</svg>

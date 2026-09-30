@@ -1,0 +1,159 @@
+/*
+ * Full-screen layers, back to front: sky, ground, sprites, ruler, readout (start.css adds step 1's start
+ * screen between them). None of them scrolls; world.js redraws them every frame. The sky and ruler follow
+ * the altitude; the ground, sprites and any [data-step] layer slide with the steps. The ground layer's top
+ * edge is 0 m: world.js moves it with a transform, and everything inside it is sized in pixels.
+ */
+:root {
+  --turf-px: 10px;
+  --blades-px: 30px; /* keep in sync with GRASS_BLADES_PX in world.js */
+
+  --topsoil: #5e3b20;
+  --dirt: #7a5230;
+  --clay: #8c5a3a;
+  --grass: #4caf50;
+  --grass-light: #6cc35f;
+  --ruler-bg: rgb(15 25 45 / 28%);
+  --ruler-ink: #fff;
+  --readout-bg: #1f2a44;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  background: var(--dirt);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.loading .stage {
+  visibility: hidden;
+}
+
+/* `clip`, not just `hidden`: a hidden box can still be scrolled by focus or script, which would shift the
+   whole world (world.js also snaps it back where clip is unsupported). */
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  overflow: clip;
+  touch-action: none;
+}
+
+.stage > * {
+  position: absolute;
+}
+
+/* world.js sets the gradient each frame; this is only the colour before the first frame. */
+.sky {
+  inset: 0;
+  background: #dff1fb;
+}
+
+/* A screen-tall block whose top edge is 0 m, so the dirt always reaches the bottom of the screen. */
+.ground {
+  inset: 0 0 auto;
+  height: 100%;
+  will-change: transform;
+}
+
+.ground > * {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Everything below 0 m: roots under the turf, pebbles throughout, dark topsoil fading to clay with depth. */
+.dirt {
+  inset: 0;
+  background:
+    url("../img/ground/roots.svg") left 0 top var(--turf-px) / 290px 50px repeat-x,
+    url("../img/ground/pebbles.svg") 0 0 / 518px 370px,
+    linear-gradient(to bottom, var(--topsoil) 0, var(--topsoil) 20px, var(--dirt) 80px, var(--clay) 400px);
+}
+
+/* The turf band just under 0 m: blades poke above it, a wavy lip hangs below. */
+.grass {
+  top: 0;
+  height: var(--turf-px);
+  background: linear-gradient(to bottom, var(--grass-light), var(--grass));
+}
+
+.grass::before,
+.grass::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.grass::before {
+  bottom: 100%;
+  height: var(--blades-px);
+  background: url("../img/ground/grass.svg") 0 100% / 120px 30px repeat-x;
+}
+
+.grass::after {
+  top: 100%;
+  height: 8px;
+  background: url("../img/ground/grass-edge.svg") 0 0 / 40px 8px repeat-x;
+}
+
+.sprites {
+  inset: 0;
+  pointer-events: none;
+}
+
+.sprite {
+  position: absolute;
+  left: 0;
+  top: 0;
+  user-select: none;
+}
+
+/* Left-edge altitude ruler; world.js draws the ticks and labels on this canvas. */
+.ruler {
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100%;
+  background: var(--ruler-bg);
+}
+
+/* Fixed marker at mid-screen: the camera altitude. */
+.readout {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.readout::after {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background: var(--readout-bg);
+}
+
+.readout-value {
+  min-width: 84px;
+  padding: 5px 10px;
+  background: var(--readout-bg);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  border-radius: 0 999px 999px 0;
+}

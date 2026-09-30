@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<!-- FW2: drooping golden willow -->
+<defs>
+  <radialGradient id="fw2-glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffb347" stop-opacity="0.55"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+  <radialGradient id="fw2-core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff"/><stop offset="0.4" stop-color="#fff7d6"/><stop offset="1" stop-color="#ffc93c" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="100" cy="100" r="96" fill="url(#fw2-glow)"/>
+<path d="M100,100 Q44.0,70.0 30.0,148.0" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="51.1" cy="99.7" r="1.8" fill="#fff1a8"/>
+<circle cx="39.6" cy="115.8" r="1.8" fill="#fff1a8"/>
+<circle cx="32.5" cy="136.2" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q47.4,54.3 34.2,132.3" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="54.1" cy="87.1" r="1.8" fill="#fff1a8"/>
+<circle cx="43.3" cy="101.0" r="1.8" fill="#fff1a8"/>
+<circle cx="36.6" cy="120.6" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q57.1,40.4 46.4,118.4" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="62.5" cy="76.1" r="1.8" fill="#fff1a8"/>
+<circle cx="53.8" cy="88.0" r="1.8" fill="#fff1a8"/>
+<circle cx="48.3" cy="106.8" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q72.0,30.2 65.0,108.2" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="75.6" cy="67.9" r="1.8" fill="#fff1a8"/>
+<circle cx="69.8" cy="78.4" r="1.8" fill="#fff1a8"/>
+<circle cx="66.3" cy="96.6" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q90.3,24.7 87.8,102.7" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="91.5" cy="63.5" r="1.8" fill="#fff1a8"/>
+<circle cx="89.5" cy="73.3" r="1.8" fill="#fff1a8"/>
+<circle cx="88.3" cy="91.2" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q109.7,24.7 112.2,102.7" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="108.5" cy="63.5" r="1.8" fill="#fff1a8"/>
+<circle cx="110.5" cy="73.3" r="1.8" fill="#fff1a8"/>
+<circle cx="111.7" cy="91.2" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q128.0,30.2 135.0,108.2" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="124.4" cy="67.9" r="1.8" fill="#fff1a8"/>
+<circle cx="130.2" cy="78.4" r="1.8" fill="#fff1a8"/>
+<circle cx="133.7" cy="96.6" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q142.9,40.4 153.6,118.4" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="137.5" cy="76.1" r="1.8" fill="#fff1a8"/>
+<circle cx="146.2" cy="88.0" r="1.8" fill="#fff1a8"/>
+<circle cx="151.7" cy="106.8" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q152.6,54.3 165.8,132.3" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="145.9" cy="87.1" r="1.8" fill="#fff1a8"/>
+<circle cx="156.7" cy="101.0" r="1.8" fill="#fff1a8"/>
+<circle cx="163.4" cy="120.6" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q156.0,70.0 170.0,148.0" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="148.9" cy="99.7" r="1.8" fill="#fff1a8"/>
+<circle cx="160.4" cy="115.8" r="1.8" fill="#fff1a8"/>
+<circle cx="167.5" cy="136.2" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q152.6,85.7 165.8,163.7" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="145.9" cy="112.2" r="1.8" fill="#fff1a8"/>
+<circle cx="156.7" cy="130.5" r="1.8" fill="#fff1a8"/>
+<circle cx="163.4" cy="151.8" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q142.9,99.6 153.6,177.6" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="137.5" cy="123.3" r="1.8" fill="#fff1a8"/>
+<circle cx="146.2" cy="143.5" r="1.8" fill="#fff1a8"/>
+<circle cx="151.7" cy="165.6" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q128.0,109.8 135.0,187.8" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="124.4" cy="131.4" r="1.8" fill="#fff1a8"/>
+<circle cx="130.2" cy="153.1" r="1.8" fill="#fff1a8"/>
+<circle cx="133.7" cy="175.8" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q109.7,115.3 112.2,193.3" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="108.5" cy="135.8" r="1.8" fill="#fff1a8"/>
+<circle cx="110.5" cy="158.2" r="1.8" fill="#fff1a8"/>
+<circle cx="111.7" cy="181.2" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q90.3,115.3 87.8,193.3" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="91.5" cy="135.8" r="1.8" fill="#fff1a8"/>
+<circle cx="89.5" cy="158.2" r="1.8" fill="#fff1a8"/>
+<circle cx="88.3" cy="181.2" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q72.0,109.8 65.0,187.8" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="75.6" cy="131.4" r="1.8" fill="#fff1a8"/>
+<circle cx="69.8" cy="153.1" r="1.8" fill="#fff1a8"/>
+<circle cx="66.3" cy="175.8" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q57.1,99.6 46.4,177.6" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="62.5" cy="123.3" r="1.8" fill="#fff1a8"/>
+<circle cx="53.8" cy="143.5" r="1.8" fill="#fff1a8"/>
+<circle cx="48.3" cy="165.6" r="1.8" fill="#fff1a8"/>
+<path d="M100,100 Q47.4,85.7 34.2,163.7" stroke="#ffc93c" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.9"/>
+<circle cx="54.1" cy="112.2" r="1.8" fill="#fff1a8"/>
+<circle cx="43.3" cy="130.5" r="1.8" fill="#fff1a8"/>
+<circle cx="36.6" cy="151.8" r="1.8" fill="#fff1a8"/>
+<path d="M36,25 L37.25,28.75 L41,30 L37.25,31.25 L36,35 L34.75,31.25 L31,30 L34.75,28.75 Z" fill="#fff7d6"/>
+<path d="M168,38 L169.5,42.5 L174,44 L169.5,45.5 L168,50 L166.5,45.5 L162,44 L166.5,42.5 Z" fill="#fff7d6"/>
+<circle cx="100" cy="100" r="20" fill="url(#fw2-core)"/>
+
+</svg>
