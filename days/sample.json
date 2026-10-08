@@ -1,0 +1,87 @@
+{
+  "label": "B#1",
+  "notes": "Hand-made sample day for the mock. Bank ids by level: 1 art-c1-p001-a, 2 mashup-c2-p001-b, 3 general-c2-p006-b, 4 movies-c1-p021-a, 5 brands-c2-p004-b, 6 puzzles-c2-p009-b, 7 crossword-c2-p018-d. Every question is at its real level. The crossword is HOT MIC (level 7), not the suggested OPEN ARMS (level 4): the sort questions are only at level 4 (Disney or DreamWorks) and level 5 (history-c1-p010, the Goodyear & Wilson logos' level), so the sort takes level 4 and the crossword moves to a free level.",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created this piece",
+      "images": [{ "src": "img/q/sample/art-c1-p001-a-1.jpg", "alt": "A painting of a green footbridge over a pond of water lilies" }],
+      "parts": [{ "accept": ["Claude Monet", "Monet", "Oscar-Claude Monet"], "reject": ["Manet", "Edouard Manet"] }],
+      "answer": "Claude Monet"
+    },
+    {
+      "level": 2,
+      "category": "Mashup",
+      "style": "typed",
+      "text": "Rhyming Mashup: Fast Choice",
+      "example": "rhyming",
+      "parts": [{ "accept": ["Quick Pick"], "reject": [] }],
+      "answer": "Quick Pick"
+    },
+    {
+      "level": 3,
+      "category": "General Knowledge",
+      "style": "spell",
+      "text": "Spell the word you hear",
+      "say": "maintenance",
+      "parts": [{ "accept": ["maintenance"], "reject": [] }],
+      "answer": "Maintenance"
+    },
+    {
+      "level": 4,
+      "category": "Movies",
+      "style": "match",
+      "text": "Are these movies Disney or DreamWorks?",
+      "groups": ["Disney", "DreamWorks"],
+      "items": [
+        { "text": "The Emperor’s New Groove", "group": 0 },
+        { "text": "Treasure Planet", "group": 0 },
+        { "text": "The Croods", "group": 1 },
+        { "text": "How to Train Your Dragon", "group": 1 }
+      ],
+      "answer": "Disney: The Emperor’s New Groove, Treasure Planet. DreamWorks: The Croods, How to Train Your Dragon."
+    },
+    {
+      "level": 5,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Identify these two logos",
+      "images": [
+        { "src": "img/q/sample/brands-c2-p004-b-1.jpg", "alt": "A yellow logo on navy with most of the lettering hidden" },
+        { "src": "img/q/sample/brands-c2-p004-b-2.png", "alt": "A white W on a red square" }
+      ],
+      "parts": [
+        { "accept": ["Goodyear", "Good Year", "Goodyear Tire"], "reject": ["Goodrich", "BFGoodrich"] },
+        { "accept": ["Wilson", "Wilson Sporting Goods"], "reject": [] }
+      ],
+      "order": "fixed",
+      "answer": "Goodyear & Wilson",
+      "reveal": [
+        { "src": "img/q/sample/brands-c2-p004-b-3.png", "alt": "The full Goodyear logo" },
+        { "src": "img/q/sample/brands-c2-p004-b-4.png", "alt": "The full Wilson logo" }
+      ]
+    },
+    {
+      "level": 6,
+      "category": "Puzzles",
+      "style": "typed",
+      "text": "Solve this rebus puzzle",
+      "example": "rebus",
+      "images": [{ "src": "img/q/sample/puzzles-c2-p009-b-1.png", "alt": "The letters of TRAIL written four times, each time in a different order" }],
+      "parts": [{ "accept": ["Trail Mix"], "reject": [] }],
+      "answer": "Trail Mix (TRAIL, mixed up)"
+    },
+    {
+      "level": 7,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Source for an off-air comment during a press conference: _ _ T _ I _",
+      "example": "crossword",
+      "joined": true,
+      "parts": [{ "accept": ["HOTMIC"], "reject": [] }],
+      "answer": "HOTMIC (HOT MIC)"
+    }
+  ]
+}

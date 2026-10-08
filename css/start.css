@@ -1,0 +1,703 @@
+/*
+ * Step 1's start screen: the cirrus backdrop, the title block with LIFTOFF, the How to play stone in the dirt
+ * and its card, and the question box that floats up after LIFTOFF. world.js slides the [data-step] layers
+ * with step 1, so everything here is laid out as it looks with step 1 at rest, where 0 m (the grass) is at
+ * mid-screen: the sky is the top half and the dirt the bottom half.
+ *
+ * Sizes use one unit, --u, taken from the viewport: small enough that the title block fits the sky above
+ * the grass blades and the title fits the strip between the ruler and the right-hand controls (the same
+ * gutters world.js keeps for sprites). Text has pixel floors so it stays readable on a phone.
+ */
+@font-face {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("../fonts/fredoka-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600 800;
+  font-display: swap;
+  src: url("../fonts/nunito-latin.woff2") format("woff2");
+}
+
+:root {
+  --gutter-left: 80px; /* SPRITE_GUTTER_LEFT_PX in world.js */
+  --gutter-right: 64px; /* SPRITE_GUTTER_RIGHT_PX in world.js */
+  --strip: calc(100vw - var(--gutter-left) - var(--gutter-right));
+  --strip-centre: calc(var(--gutter-left) + var(--strip) / 2);
+  --screen-h: 100vh; /* 100dvh where supported, below */
+  --u: min(calc(var(--strip) / 54), calc((var(--screen-h) / 2 - var(--blades-px)) / 38));
+  --liftoff-size: max(calc(4.8 * var(--u)), 26px); /* LIFTOFF's font size; the pill is about 2.06 of it tall */
+  --bunch-w: max(calc(13 * var(--u)), 84px);
+  --bunch-inset: calc(2.2 * var(--u));
+
+  --font-display: "Fredoka", "Trebuchet MS", sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+
+  --ink: #1f2a4d;
+  --ink-soft: #3c5378;
+  --title-shade-1: #d6ebfb;
+  --title-shade-2: #a9cdee;
+  --title-shade-3: #7fb0df;
+  --title-glow: rgb(30 70 130 / 45%);
+  --sun-top: #ffe98a;
+  --sun: #ffc93c;
+  --sun-low: #f5a91b;
+  --sun-ledge: #c9820e;
+  --sun-shadow: rgb(120 70 10 / 30%);
+  --glass: rgb(255 255 255 / 58%);
+  --glass-still: rgb(240 248 255 / 86%); /* the glass without its blur, while the world slides */
+  --glass-card: rgb(255 255 255 / 55%);
+  --glass-rim: rgb(255 255 255 / 85%);
+  --glass-shadow: rgb(30 70 130 / 18%);
+  --field: rgb(255 255 255 / 88%);
+  --stone-light: #cfc5b6;
+  --stone: #9d8f7c;
+  --stone-dark: #7d6f5e;
+  --stone-ink: #3a2a1a;
+  --focus: #2f7fd1;
+  --focus-on-dirt: #ffd166;
+}
+
+/* The visible height on phones (their browser bars come and go); 100vh above is the fallback. */
+@supports (height: 100dvh) {
+  :root {
+    --screen-h: 100dvh;
+  }
+}
+
+/* Author display rules (grid, flex) would otherwise beat the browser's own [hidden] rule. */
+[hidden] {
+  display: none !important;
+}
+
+/* The hooked cirrus streaks fill the sky down to the grass. */
+.cirrus {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.start {
+  inset: 0;
+  pointer-events: none;
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+.start-ui,
+.how-card,
+.qbox {
+  pointer-events: auto;
+}
+
+/* ---- Title block: its three lines spread down the sky, LIFTOFF centred on the 0 m line (grass meets dirt);
+   the whole block floats up and fades on LIFTOFF ---- */
+
+/* The block's bottom is the top of the grass blades; its padding keeps the lines clear of LIFTOFF's top half. */
+.start-ui {
+  position: absolute;
+  top: 0;
+  bottom: calc(50% + var(--blades-px));
+  left: var(--gutter-left);
+  right: var(--gutter-right);
+  padding-bottom: max(calc(1.05 * var(--liftoff-size) - var(--blades-px) + 2 * var(--u)), 6px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* text wraps inside the strip rather than widening it */
+  align-content: space-evenly;
+  justify-items: center;
+  text-align: center;
+  transition:
+    transform 0.9s cubic-bezier(0.5, 0, 0.75, 0),
+    opacity 0.7s ease-in 0.2s;
+}
+
+/* Narrow screens: the title spans the strip, so the lines start below the bee (top 16%, about 36 px tall). */
+@media (max-width: 560px) {
+  .start-ui {
+    padding-top: calc(0.16 * (var(--screen-h) / 2 - var(--blades-px)) + 36px);
+  }
+}
+
+.lifted-off .start-ui {
+  transform: translateY(calc(-1 * var(--screen-h)));
+  opacity: 0;
+}
+
+/* A game resumed after a reload lifts off with no floats or fades (start.js liftOff({ instant: true })). */
+.no-float .start-ui,
+.no-float .ground > .how-stone {
+  transition: none;
+}
+
+.no-float .qgroup {
+  animation: bob 4.5s ease-in-out 2s infinite;
+}
+
+/* The How to play card is glass, so the title block steps back while it is open. */
+.how-open .start-ui {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.deco-bee,
+.deco-kite {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.deco-bee {
+  width: max(calc(7 * var(--u)), 40px);
+  left: 3%;
+  top: 16%;
+}
+
+/* 1.5x the kite in the approved mock. */
+.deco-kite {
+  width: max(calc(7.5 * var(--u)), 42px);
+  right: 4%;
+  top: 8%;
+  transform: rotate(8deg);
+}
+
+/* The title and its BETA stamp are one line of the three. */
+.title-wrap {
+  display: grid;
+  justify-items: center;
+}
+
+/* As big as the sky allows, but never wider than the strip (CIRRUSLY is about 4.6em wide). */
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: min(calc(13 * var(--u)), calc(var(--strip) / 4.8));
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-shadow:
+    0 0.02em 0 var(--title-shade-1),
+    0 0.04em 0 var(--title-shade-2),
+    0 0.06em 0 var(--title-shade-3),
+    0 0.1em 0.18em var(--title-glow),
+    0 0 0.02em rgb(40 90 150 / 40%);
+}
+
+.tagline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: max(calc(3.2 * var(--u)), 18px);
+  text-wrap: balance;
+}
+
+.rules-line {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(2.1 * var(--u)), 14px);
+  color: var(--ink-soft);
+  text-wrap: balance;
+}
+
+/* ---- Glossy yellow pills: LIFTOFF and Submit ---- */
+
+.liftoff,
+.go {
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  background: linear-gradient(var(--sun-top), var(--sun) 55%, var(--sun-low));
+  box-shadow:
+    inset 0 0.07em 0 rgb(255 255 255 / 70%),
+    0 0.13em 0 var(--sun-ledge),
+    0 0.26em 0.38em var(--sun-shadow);
+  transition:
+    transform 0.08s,
+    box-shadow 0.08s;
+}
+
+.liftoff:active,
+.go:active {
+  transform: translateY(0.1em);
+  box-shadow:
+    inset 0 0.07em 0 rgb(255 255 255 / 70%),
+    0 0.03em 0 var(--sun-ledge),
+    0 0.08em 0.16em var(--sun-shadow);
+}
+
+/* The word is about 4.4em wide; on the narrowest phones the side padding gives way so the pill fits the strip.
+   Centred on the 0 m line, half in the sky and half in the dirt (`translate`, so :active's transform still works). */
+.liftoff {
+  position: absolute;
+  top: calc(100% + var(--blades-px));
+  left: 50%;
+  translate: -50% -50%;
+  white-space: nowrap;
+  font-size: var(--liftoff-size);
+  padding: 0.42em clamp(0.6em, calc((var(--strip) - 4.6em) / 2), 1.7em);
+}
+
+.go {
+  font-size: max(calc(1.9 * var(--u)), 17px);
+  padding: 0.42em 1.4em;
+  letter-spacing: 0.02em;
+}
+
+.start button:focus-visible,
+.start input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* ---- How to play stone: sits in the dirt, so it lives in (and slides with) the ground layer ---- */
+
+.ground > .how-stone {
+  left: var(--strip-centre);
+  right: auto;
+  top: max(14%, calc(1.05 * var(--liftoff-size) + 24px)); /* under LIFTOFF's bottom half */
+  transform: translateX(-50%);
+  padding: 0.45em 1.1em;
+  border: 0;
+  border-radius: 48% 52% 45% 55% / 60% 55% 45% 40%;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: max(calc(1.45 * var(--u)), 13px);
+  color: var(--stone-ink);
+  background: radial-gradient(circle at 35% 30%, var(--stone-light), var(--stone) 70%, var(--stone-dark));
+  box-shadow:
+    inset 0 -2px 0 rgb(0 0 0 / 20%),
+    0 2px 3px rgb(0 0 0 / 35%);
+  transition: opacity 0.5s;
+}
+
+.ground > .how-stone:focus-visible {
+  outline: 3px solid var(--focus-on-dirt);
+  outline-offset: 3px;
+}
+
+.lifted-off .ground > .how-stone {
+  opacity: 0;
+}
+
+/* ---- Sky glass: frosted, whatever is behind shows blurred ---- */
+
+/*
+ * Where a card hangs: in the sky, centred between the headroom its balloons need and the grass blades.
+ * A card too tall for that (a picture question on a small screen) runs on down over the grass instead of
+ * up off the screen, because auto margins never go negative.
+ */
+.sky-slot {
+  position: absolute;
+  top: calc(var(--bunch-w) * 0.85); /* a full bunch of six stands about 0.7 x its width above the card */
+  bottom: calc(50% + var(--blades-px));
+  left: var(--gutter-left);
+  right: var(--gutter-right);
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.how-card,
+.qbox {
+  position: relative; /* the bunch anchors' containing block, with or without the float animations */
+  isolation: isolate; /* keeps the balloon bunches (z-index -1) behind the glass but inside the card */
+}
+
+.how-card,
+.qgroup {
+  flex: none;
+  margin: auto;
+}
+
+/* At least 340px where the strip allows, so short landscape screens get a wider, shorter card. */
+.how-card {
+  width: min(max(calc(46 * var(--u)), 340px), 100%);
+  transform-origin: 50% calc(-20 * var(--u));
+  animation:
+    drift 2.6s cubic-bezier(0.3, 0.7, 0.3, 1) both,
+    cardsway 4s ease-in-out 2.6s infinite;
+}
+
+.how-body {
+  position: relative;
+  padding: max(calc(2 * var(--u)), 16px) max(calc(2.6 * var(--u)), 18px) max(calc(2.2 * var(--u)), 18px);
+  background: var(--glass-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: max(calc(0.3 * var(--u)), 2px) solid var(--glass-rim);
+  border-radius: max(calc(2 * var(--u)), 16px);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(var(--screen-h) - var(--bunch-w) * 0.85 - 12px);
+}
+
+.how-body h2 {
+  margin: 0 0 calc(0.8 * var(--u));
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(2.8 * var(--u)), 22px);
+}
+
+.how-body ol {
+  margin: 0;
+  padding-left: max(calc(2.4 * var(--u)), 20px);
+  display: grid;
+  gap: calc(0.6 * var(--u));
+  font-size: max(calc(1.6 * var(--u)), 15px);
+  font-weight: 700;
+  line-height: 1.35;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.how-close {
+  position: absolute;
+  top: calc(1 * var(--u));
+  right: calc(1 * var(--u));
+  width: max(calc(3 * var(--u)), 30px);
+  height: max(calc(3 * var(--u)), 30px);
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: max(calc(1.5 * var(--u)), 15px);
+  line-height: 1;
+  color: var(--ink-soft);
+  background: rgb(0 0 0 / 7%);
+}
+
+/* The question slot has the same margin top and bottom, so the question box sits in the middle of the screen. */
+.q-slot {
+  bottom: calc(var(--bunch-w) * 0.85);
+}
+
+/*
+ * The question box is centred on its own; the timer hangs off its left side, as big as the room between the
+ * box and the ruler allows (at most 16u). Narrow or squarish screens have no room there: see the media query.
+ */
+.qgroup {
+  --timer-gap: calc(2.4 * var(--u));
+  position: relative;
+  width: min(calc(70 * var(--u)), 100%);
+  animation:
+    floatup 1.5s cubic-bezier(0.2, 0.8, 0.25, 1) 0.45s both,
+    bob 4.5s ease-in-out 2s infinite;
+}
+
+.timer {
+  position: absolute;
+  right: calc(100% + var(--timer-gap));
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(
+    calc(16 * var(--u)),
+    calc((var(--strip) - min(70 * var(--u), var(--strip))) / 2 - var(--timer-gap))
+  );
+  filter: drop-shadow(0 calc(0.8 * var(--u)) calc(1.2 * var(--u)) rgb(30 70 130 / 30%));
+}
+
+.dial {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.qbox {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: max(calc(0.9 * var(--u)), 10px);
+  padding: max(calc(1.4 * var(--u)), 14px) max(calc(2.2 * var(--u)), 14px) max(calc(2 * var(--u)), 14px);
+  background: var(--glass);
+  backdrop-filter: blur(20px) saturate(1.1);
+  -webkit-backdrop-filter: blur(20px) saturate(1.1);
+  border: max(calc(0.3 * var(--u)), 2px) solid var(--glass-rim);
+  border-radius: max(calc(2.2 * var(--u)), 16px);
+  box-shadow: 0 calc(1 * var(--u)) calc(2.4 * var(--u)) var(--glass-shadow);
+  transition: background-color 0.4s ease;
+}
+
+/* While the world slides (world.js "sliding" on <html>) the box is a plain frosted fill: re-blurring a moving
+   backdrop every frame was most of a slide's drawing cost. The fill comes at once (an unblurred backdrop must
+   not show through); when the slide ends the blur is back and the fill fades to glass (the .qbox transition). */
+.sliding .qbox {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: var(--glass-still);
+  transition: none;
+}
+
+.qpic,
+.qanswer {
+  justify-self: stretch;
+}
+
+.qnum {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(2.3 * var(--u)), 20px);
+  line-height: 1.1;
+}
+
+/*
+ * Pictures sit side by side, one <figure> each, sharing the width equally (game.js can hang an answer box
+ * under each, so the figures stretch to one height and the pictures centre above the boxes).
+ */
+.qpic {
+  display: flex;
+  justify-content: center;
+  gap: max(calc(1 * var(--u)), 8px);
+}
+
+.qpic figure {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 6px;
+}
+
+/*
+ * Wide pictures fill the width; square and narrow ones stop at the height cap and centre, glass either side.
+ * The cap (question, reveal and example pictures alike) is bigger where the timer has room beside the box
+ * (--pic-design; the narrow screens' size is in the media query below), but never taller than the room the rest
+ * of the box leaves in the slot (--pic-fit, which game.js measures; unset outside play mode), nor under 48px.
+ */
+.qbox {
+  --pic-design: calc(0.42 * var(--screen-h));
+}
+
+.qpic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: max(48px, min(var(--pic-fit, 100vh), var(--pic-design)));
+  object-fit: contain;
+}
+
+.qtext {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(1.9 * var(--u)), 16px);
+  line-height: 1.3;
+}
+
+.qanswer {
+  display: flex;
+  gap: max(calc(1 * var(--u)), 8px);
+}
+
+/* 16px minimum so phones don't zoom in when the field takes focus. */
+.qanswer input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-weight: 700;
+  font-size: max(calc(1.8 * var(--u)), 16px);
+  padding: 0.5em 0.75em;
+  color: var(--ink);
+  background: var(--field);
+  border: max(calc(0.25 * var(--u)), 2px) solid rgb(255 255 255 / 95%);
+  border-radius: max(calc(1 * var(--u)), 10px);
+}
+
+/* ---- Balloon bunches at the top corners (start.js draws them); the knot sits on the card's top edge ---- */
+
+.bunch-anchor {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.bunch-anchor[data-side="left"] {
+  left: var(--bunch-inset);
+}
+
+.bunch-anchor[data-side="right"] {
+  right: var(--bunch-inset);
+}
+
+.bunch-anchor svg {
+  position: absolute;
+  width: var(--bunch-w);
+  height: calc(var(--bunch-w) * 0.9385);
+  left: calc(var(--bunch-w) / -2);
+  top: calc(var(--bunch-w) * -0.915);
+  overflow: visible;
+  transform-origin: 50% 97%;
+  animation: sway 5s ease-in-out infinite;
+}
+
+.bunch-anchor[data-side="left"] svg {
+  animation-delay: -2.5s;
+}
+
+.bal-new {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: pop 0.6s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+/* Narrow or squarish screens: no room beside the box, so the timer sits centred above it, between the bunches,
+   and pictures keep the smaller size. */
+@media (max-width: 900px), (max-aspect-ratio: 5/4) {
+  .qbox {
+    --pic-design: max(calc(12 * var(--u)), calc(0.18 * var(--screen-h)));
+  }
+
+  .qgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .timer {
+    position: static;
+    transform: none;
+    width: max(calc(11 * var(--u)), 96px);
+  }
+}
+
+/* Phones: stack Submit under the field and keep the bunches over the card rather than the ruler. */
+@media (max-width: 560px) {
+  :root {
+    --bunch-inset: calc(var(--bunch-w) * 0.32);
+  }
+
+  .qanswer {
+    flex-direction: column;
+  }
+
+  /* A dial the size of the approved mock, so the seconds read at a glance (120px on a 320px screen). */
+  .timer {
+    width: min(140px, 37.5vw);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(calc(-0.6 * var(--screen-h)));
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatup {
+  from {
+    opacity: 0;
+    transform: translateY(calc(0.6 * var(--screen-h)));
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(calc(-1.2 * var(--u)));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(calc(-0.6 * var(--u)));
+  }
+}
+
+/* The card's sway starts and ends level, where the drift leaves it, so it eases in without a jump. */
+@keyframes cardsway {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reduced motion: no floats, drifts or sway; things simply appear and disappear. */
+@media (prefers-reduced-motion: reduce) {
+  .start-ui,
+  .how-open .start-ui,
+  .ground > .how-stone,
+  .liftoff,
+  .go,
+  .qbox {
+    transition: none;
+  }
+
+  .how-card,
+  .qgroup,
+  .no-float .qgroup,
+  .bunch-anchor svg,
+  .bal-new {
+    animation: none;
+  }
+}

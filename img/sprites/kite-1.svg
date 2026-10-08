@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 270">
+<!-- K1: classic four-panel diamond kite with a bow tail -->
+<defs>
+<linearGradient id="k1-tl" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#f4a93a"/></linearGradient>
+<linearGradient id="k1-tr" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#ff6b5a"/><stop offset="1" stop-color="#d9453b"/></linearGradient>
+<linearGradient id="k1-bl" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#4ba3e3"/><stop offset="1" stop-color="#2a70b8"/></linearGradient>
+<linearGradient id="k1-br" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#2ec4b6"/><stop offset="1" stop-color="#1f8f84"/></linearGradient>
+</defs>
+<path d="M100,92 Q60,170 6,268" stroke="#f4f1ea" stroke-width="1.2" fill="none" opacity="0.9"/>
+<g transform="rotate(-10 100 90)">
+<path d="M100,172 Q86,196 104,214 Q120,232 100,258" stroke="#f4f1ea" stroke-width="1.4" fill="none"/>
+<path d="M95,192 L88,187 L88,197 Z M95,192 L102,187 L102,197 Z" fill="#ff6b5a"/><circle cx="95" cy="192" r="1.8" fill="#ff6b5a"/>
+<path d="M104,214 L97,209 L97,219 Z M104,214 L111,209 L111,219 Z" fill="#ffd166"/><circle cx="104" cy="214" r="1.8" fill="#ffd166"/>
+<path d="M110,236 L103,231 L103,241 Z M110,236 L117,231 L117,241 Z" fill="#4ba3e3"/><circle cx="110" cy="236" r="1.8" fill="#4ba3e3"/>
+<path d="M100,256 L93,251 L93,261 Z M100,256 L107,251 L107,261 Z" fill="#2ec4b6"/><circle cx="100" cy="256" r="1.8" fill="#2ec4b6"/>
+<path d="M100,70 L100,8 L38,70 Z" fill="url(#k1-tl)"/>
+<path d="M100,70 L100,8 L162,70 Z" fill="url(#k1-tr)"/>
+<path d="M100,70 L38,70 L100,172 Z" fill="url(#k1-bl)"/>
+<path d="M100,70 L162,70 L100,172 Z" fill="url(#k1-br)"/>
+<path d="M100,8 L100,172 M38,70 L162,70" stroke="#c9975a" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M38,70 L100,8 L162,70 L100,172 Z" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/>
+<path d="M72,40 Q86,26 96,18" stroke="#fff" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M100,70 L100,92 M72,70 L100,92 M128,70 L100,92" stroke="#e9e2d2" stroke-width="0.9" opacity="0.9"/>
+</g>
+</svg>

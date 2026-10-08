@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" class="loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cirrusly</title>
+  <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/world.css">
+  <link rel="stylesheet" href="css/start.css">
+  <link rel="stylesheet" href="css/game.css">
+  <script src="js/steps.js" defer></script>
+  <script src="js/world.js" defer></script>
+  <script src="js/match.js" defer></script>
+  <script src="js/start.js" defer></script>
+  <script src="js/game.js" defer></script>
+  <script src="js/dev-nav.js" defer></script>
+  <script src="js/debug-viewport.js" defer></script>
+</head>
+<body>
+  <!-- Fixed full-screen layers that world.js redraws from the camera; see the note at the top of world.js.
+       Elements with data-step="n" slide with step n's scenery. -->
+  <div class="stage">
+    <div class="sky"></div>
+    <img class="cirrus" data-step="1" src="img/start/cirrus.svg" alt="">
+    <div class="ground">
+      <div class="dirt"></div>
+      <div class="grass"></div>
+      <button class="how-stone" type="button" aria-controls="how-card" aria-expanded="false">How to play</button>
+    </div>
+    <div class="sprites"></div>
+
+    <!-- Step 1's start screen, How to play card and question box; start.js drives them. -->
+    <div class="start" data-step="1">
+      <div class="start-ui">
+        <img class="deco-bee" src="img/sprites/bumblebee-1.svg" alt="">
+        <img class="deco-kite" src="img/sprites/kite-1.svg" alt="">
+        <div class="title-wrap">
+          <h1 class="title">CIRRUSLY</h1>
+          <p class="beta">BETA</p>
+        </div>
+        <p class="tagline">Seriously fun daily trivia</p>
+        <p class="rules-line">7 questions&nbsp;· 40 seconds each&nbsp;· Harder the more you rise</p>
+        <button class="liftoff" type="button">LIFTOFF</button>
+      </div>
+
+      <div class="sky-slot">
+        <section class="how-card" id="how-card" role="dialog" aria-labelledby="how-title" hidden>
+          <div class="bunch-anchor" data-side="left"></div>
+          <div class="bunch-anchor" data-side="right"></div>
+          <div class="how-body">
+            <button class="how-close" type="button" aria-label="Close How to play">✕</button>
+            <h2 id="how-title">How to play</h2>
+            <ol>
+              <li>Answer <b>7 questions</b>, one for each step of the climb, from the worms up to the jets.</li>
+              <li>You get <b>40 seconds</b> a question. Type your answer and press Submit.</li>
+              <li>The higher you rise, the harder the questions get.</li>
+              <li>A new set of questions every day.</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+
+      <div class="sky-slot q-slot">
+        <!-- The timer floats beside the box (above it on narrow screens); the group floats up together. -->
+        <div class="qgroup" hidden>
+          <div class="timer">
+            <!-- Classic airspeed dial, 0-40 s over 270 degrees: the needle is rotate(-225 + 270 * seconds / 40) about
+                 the centre (80, 80), resting at 40. game.js redraws the arcs, the needle and the number window. -->
+            <svg class="dial" viewBox="0 0 160 160" role="img" aria-label="Timer: 40 seconds">
+              <defs>
+                <radialGradient id="dial-bezel" cx="0.35" cy="0.3" r="0.8">
+                  <stop offset="0" stop-color="#9aa3b5"/><stop offset="1" stop-color="#3a4052"/>
+                </radialGradient>
+                <radialGradient id="dial-face" cx="0.4" cy="0.35" r="0.8">
+                  <stop offset="0" stop-color="#252b38"/><stop offset="1" stop-color="#0d1017"/>
+                </radialGradient>
+              </defs>
+              <circle cx="80" cy="80" r="76" fill="url(#dial-bezel)"/>
+              <!-- Game only (game.js): the outer ring beats red at 5 s and under, and the extra time for extra answer
+                   boxes is a blue arc on it, ending at 40, that drains before the needle moves. -->
+              <circle class="dial-ring" cx="80" cy="80" r="71" fill="none" stroke-width="10"/>
+              <path class="dial-extra" d="" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <circle cx="80" cy="80" r="66" fill="url(#dial-face)"/>
+              <!-- The seconds left as a thick arc from 0, over a faint full-length track: green above 20 s, amber
+                   from 20 s down to just above 10 s, red at 10 s and under (colours in game.css). -->
+              <path d="M37.57,122.43 A60,60 0 1,1 122.43,122.43" stroke="#fff" stroke-opacity="0.08" stroke-width="9"
+                    stroke-linecap="round" fill="none"/>
+              <path class="dial-arc" d="M37.57,122.43 A60,60 0 1,1 122.43,122.43" stroke-width="9"
+                    stroke-linecap="round" fill="none"/>
+              <g stroke="#f4f1e6" stroke-linecap="round">
+                <path stroke-width="2.4" d="M43.9 116.1L37.6 122.4 M30.0 89.9L21.2 91.7 M32.9 60.5L24.6 57.0
+                  M51.7 37.6L46.7 30.1 M80.0 29.0L80.0 20.0 M108.3 37.6L113.3 30.1
+                  M127.1 60.5L135.4 57.0 M130.0 89.9L138.8 91.7 M116.1 116.1L122.4 122.4"/>
+                <path stroke-width="1.2" d="M36.0 114.7L32.9 117.1 M32.3 109.3L28.8 111.3 M29.1 103.4L25.5 105.1
+                  M26.7 97.3L22.9 98.5 M24.2 84.4L20.2 84.7 M24.0 77.8L20.0 77.6
+                  M24.7 71.2L20.7 70.6 M26.1 64.8L22.3 63.7 M31.1 52.6L27.7 50.7
+                  M34.7 47.1L31.5 44.7 M38.9 42.0L35.9 39.3 M43.6 37.4L41.0 34.4
+                  M54.6 30.1L52.8 26.5 M60.6 27.5L59.2 23.7 M66.9 25.5L66.0 21.7
+                  M73.4 24.4L72.9 20.4 M86.6 24.4L87.1 20.4 M93.1 25.5L94.0 21.7
+                  M99.4 27.5L100.8 23.7 M105.4 30.1L107.2 26.5 M116.4 37.4L119.0 34.4
+                  M121.1 42.0L124.1 39.3 M125.3 47.1L128.5 44.7 M128.9 52.6L132.3 50.7
+                  M133.9 64.8L137.7 63.7 M135.3 71.2L139.3 70.6 M136.0 77.8L140.0 77.6
+                  M135.8 84.4L139.8 84.7 M133.3 97.3L137.1 98.5 M130.9 103.4L134.5 105.1
+                  M127.7 109.3L131.2 111.3 M124.0 114.7L127.1 117.1"/>
+              </g>
+              <g fill="#f4f1e6" font-family="Nunito, sans-serif" font-weight="800" font-size="12" text-anchor="middle">
+                <text x="52.4" y="112.1">0</text><text x="44.0" y="69.6">10</text><text x="80.0" y="45.5">20</text>
+                <text x="116.0" y="69.6">30</text><text x="107.6" y="112.1">40</text>
+              </g>
+              <g class="dial-needle" transform="rotate(45 80 80)">
+                <line x1="80" y1="80" x2="126" y2="80" stroke="#ff6a3d" stroke-width="3.2" stroke-linecap="round"/>
+              </g>
+              <circle cx="80" cy="80" r="7" fill="#c9ced9"/><circle cx="80" cy="80" r="3" fill="#3a4052"/>
+              <!-- The whole seconds left, in a dark window under the hub (number colours in game.css). -->
+              <g class="dial-window">
+                <rect x="62" y="103" width="36" height="27" rx="6" fill="#05070b" stroke="#3a4052" stroke-width="1.5"/>
+                <text class="dial-num" x="80" y="124" text-anchor="middle" font-family="Fredoka, Nunito, sans-serif"
+                      font-weight="700" font-size="21">40</text>
+              </g>
+              <ellipse cx="60" cy="42" rx="26" ry="10" fill="#fff" opacity="0.08" transform="rotate(-25 60 42)"/>
+            </svg>
+          </div>
+          <form class="qbox" aria-label="Question 1 of 7" autocomplete="off">
+            <div class="bunch-anchor" data-side="left"></div>
+            <div class="bunch-anchor" data-side="right"></div>
+            <p class="qnum">Question <span class="qnum-value">1</span> of 7</p>
+            <div class="qpic" hidden></div>
+            <p class="qtext">
+              Question question question question question question question question question question?
+            </p>
+            <div class="qanswer">
+              <input type="text" name="answer" placeholder="Type your answer" aria-label="Your answer"
+                     spellcheck="false">
+              <button class="go" type="submit">Submit</button>
+            </div>
+
+            <!-- Game only (game.js shows these): the answer boxes, the "Close!" line, the reveal, the example
+                 card shown before a tricky style, and the end screen. -->
+            <div class="qplay" hidden></div>
+            <p class="qfeedback" role="status" aria-live="polite" hidden></p>
+            <div class="qreveal" hidden>
+              <p class="qverdict" role="status" aria-live="polite"></p>
+              <p class="qright">Answer: <b class="qright-text"></b></p>
+              <div class="qpic qreveal-pics"></div>
+              <button class="go qnext" type="button">Next</button>
+            </div>
+            <div class="qexample" hidden>
+              <p class="qnum">Example: <span class="qexample-title"></span></p>
+              <div class="qpic qexample-pics"></div>
+              <p class="qtext qexample-text"></p>
+              <p class="qright">Answer: <b class="qexample-answer"></b></p>
+              <p class="qexample-explain"></p>
+              <p class="qexample-note"></p>
+              <button class="go qgotit" type="button">Got it</button>
+            </div>
+            <div class="qend" hidden>
+              <h2 class="qend-title">You reached <span class="qend-height">0 m</span></h2>
+              <p class="qend-row"></p>
+              <div class="qend-share">
+                <button class="go qend-copy" type="button">Copy</button>
+                <span class="qend-copied" role="status" aria-live="polite"></span>
+              </div>
+              <textarea class="qend-text" readonly rows="3" aria-label="Your result to share" hidden></textarea>
+              <dl class="qend-stats">
+                <div><dt>Played</dt><dd class="stat-played">0</dd></div>
+                <div><dt>Streak</dt><dd class="stat-streak">0</dd></div>
+                <div><dt>Best</dt><dd class="stat-best">0 m</dd></div>
+                <div><dt>Average climb</dt><dd class="stat-average">0 of 7</dd></div>
+              </dl>
+              <p class="qend-next">Next game in <span class="qend-countdown">00:00:00</span></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <canvas class="ruler" aria-hidden="true"></canvas>
+    <div class="readout" aria-hidden="true"><span class="readout-value">0 m</span></div>
+  </div>
+</body>
+</html>

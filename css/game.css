@@ -1,0 +1,711 @@
+/*
+ * The game (play mode, `#play`; game.js): the BETA label, the answer boxes of each style, the "Close!" line, the
+ * dial's colours, blue arc and red pulse, the balloon pop, the reveal, the example card and the end screen. Everything
+ * sits in start.css's sky-glass question box and reuses its unit --u, its colours and its glossy yellow .go pill.
+ */
+
+:root {
+  --right: #1f9d55;
+  --wrong: #d64534;
+  --close: #e08a00;
+  --extra-time: #4aa8ff;
+  --time-go: #3fd07a;
+  --time-warn: #ffb13b;
+  --time-hot: #ff3b30;
+  --chip: rgb(255 255 255 / 92%);
+  --chip-rim: rgb(31 42 77 / 18%);
+  --zone: rgb(255 255 255 / 38%);
+  --zone-rim: rgb(31 42 77 / 22%);
+  --tile-font: max(calc(1.45 * var(--u)), 14px);
+  --tile-gap: max(calc(0.7 * var(--u)), 6px);
+  --tile-h: calc(3.3 * var(--tile-font) + 4px); /* two lines (1.2 each), 0.45em padding twice, a 2px rim twice */
+}
+
+/* Wide boxes fit a title on one line, so a tile is one line tall (with a little more air). */
+@media (min-width: 700px) {
+  :root {
+    --tile-h: calc(2.5 * var(--tile-font) + 4px);
+  }
+}
+
+/* ---- BETA: a stamp on the title, play mode only ---- */
+
+.beta {
+  display: none;
+}
+
+.play .beta {
+  display: block;
+  margin: calc(-0.8 * var(--u)) 0 0;
+  padding: 0.15em 0.7em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(2.4 * var(--u)), 18px);
+  letter-spacing: 0.2em;
+  color: #fff;
+  background: linear-gradient(#ff8a5c, #e8553a);
+  border-radius: 999px;
+  box-shadow: 0 0.12em 0 #b23d25;
+  transform: rotate(-4deg);
+}
+
+/* Phones: the dev arrows' column is free in play mode, so the box takes the room up to the screen edge. */
+@media (max-width: 560px) {
+  .play .q-slot {
+    right: 10px;
+  }
+}
+
+/* ---- Answer boxes ---- */
+
+.qplay,
+.qfeedback,
+.qreveal,
+.qexample,
+.qend {
+  justify-self: stretch;
+}
+
+.qplay {
+  display: grid;
+  gap: max(calc(0.9 * var(--u)), 10px);
+  justify-items: center;
+}
+
+.qrow,
+.qfields {
+  justify-self: stretch;
+  display: flex;
+  gap: max(calc(1 * var(--u)), 8px);
+}
+
+.qfields {
+  flex-direction: column;
+}
+
+/* As start.css's answer field; 16px minimum so phones don't zoom in on focus. */
+.qfield {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  font: inherit;
+  font-weight: 700;
+  font-size: max(calc(1.8 * var(--u)), 16px);
+  padding: 0.5em 0.75em;
+  color: var(--ink);
+  background: var(--field);
+  border: max(calc(0.25 * var(--u)), 2px) solid rgb(255 255 255 / 95%);
+  border-radius: max(calc(1 * var(--u)), 10px);
+}
+
+.qpic .qfield {
+  padding: 0.45em 0.5em;
+  text-align: center;
+}
+
+.qfield.is-close {
+  border-color: var(--close);
+  box-shadow: 0 0 0 2px rgb(224 138 0 / 35%);
+}
+
+.qbox .qfield:focus-visible,
+.qbox button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.qfeedback {
+  margin: 0;
+  min-height: 1.3em;
+  font-weight: 800;
+  font-size: max(calc(1.7 * var(--u)), 15px);
+  color: #9a5a00;
+}
+
+/* An empty live region stays rendered (screen readers only announce changes to a region already there), but takes
+   no room. */
+.qfeedback:empty {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Spelling: a round speaker button above the field. */
+.qspeak {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.45em 1.1em 0.45em 0.8em;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(1.8 * var(--u)), 16px);
+  color: #fff;
+  background: linear-gradient(#5aa9ff, #2f7fd1);
+  box-shadow:
+    inset 0 0.07em 0 rgb(255 255 255 / 45%),
+    0 0.13em 0 #1d5ea3;
+}
+
+.qspeak svg {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.qspeak:active {
+  transform: translateY(0.1em);
+  box-shadow: 0 0.03em 0 #1d5ea3;
+}
+
+/* ---- Drag-to-match: equal tiles, two to a row in the "Not sorted" tray, one to a row in two equal groups ---- */
+
+.qmatch {
+  justify-self: stretch;
+  display: grid;
+  gap: max(calc(0.8 * var(--u)), 8px);
+}
+
+.qmatch-hint {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(1.4 * var(--u)), 13px);
+  color: var(--ink-soft);
+}
+
+/* Short screens: no room for the hint. */
+@media (max-height: 700px) {
+  .qmatch-hint {
+    display: none;
+  }
+}
+
+/* A part of the box that scrolls inside it once the box would run off the screen (game.js --scroll-fit), so
+   Submit under it stays in view. A touch on its background scrolls it (with momentum); a touch on a tile drags. */
+.qscroll {
+  max-height: max(120px, var(--scroll-fit, 100vh));
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* A soft fade at an edge with more to scroll to (game.js marks them); a mask, so nothing sits over the tiles. */
+.qscroll.more-below {
+  -webkit-mask-image: linear-gradient(to top, transparent, #000 28px);
+  mask-image: linear-gradient(to top, transparent, #000 28px);
+}
+
+.qscroll.more-above {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 28px);
+  mask-image: linear-gradient(to bottom, transparent, #000 28px);
+}
+
+.qscroll.more-above.more-below {
+  -webkit-mask-image: linear-gradient(transparent, #000 28px, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(transparent, #000 28px, #000 calc(100% - 28px), transparent);
+}
+
+.qmatch-slot {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: var(--tile-gap);
+}
+
+/* The unsorted list: its heading is quieter than the groups' and it has no frame until something is dragged. */
+.qmatch-tray {
+  display: grid;
+  justify-items: center;
+  gap: var(--tile-gap);
+  padding: var(--tile-gap);
+  border: 2px solid transparent;
+  border-radius: max(calc(1.2 * var(--u)), 12px);
+}
+
+.qmatch-tray > .qmatch-name {
+  font-size: max(calc(1.3 * var(--u)), 13px);
+  color: var(--ink-soft);
+  background: rgb(255 255 255 / 55%);
+}
+
+/* The list fits the tiles still in it (a dragged tile waits in place, so it only settles after the drop); once
+   empty it gives way to a quiet "All sorted" line. Its heading stays, the keyboard's way to put one back. */
+.qmatch-tray .qmatch-slot {
+  justify-self: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* An odd tile out sits centred under the pair above it, as wide as they are. */
+.qmatch-tray .qmatch-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc((100% - var(--tile-gap)) / 2);
+}
+
+.qmatch-tray .qmatch-slot:empty,
+.qmatch-slot:not(:empty) + .qmatch-done {
+  display: none;
+}
+
+.qmatch-done {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(1.4 * var(--u)), 13px);
+  color: var(--ink-soft);
+}
+
+/* Side by side, equal widths; the grid row stretches both to the taller one. */
+.qmatch-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: max(calc(0.8 * var(--u)), 8px);
+}
+
+/* A group's rim is solid, so its one dashed spot reads as the place to drop. */
+.qmatch-group {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: var(--tile-gap);
+  padding: var(--tile-gap);
+  background: var(--zone);
+  border: 2px solid var(--zone-rim);
+  border-radius: max(calc(1.2 * var(--u)), 12px);
+  cursor: pointer;
+}
+
+/* The one empty spot at the end of each group, the size of a tile (game.js puts each new tile in front of it). */
+.qmatch-drop {
+  display: grid;
+  place-items: center;
+  min-height: var(--tile-h);
+  border: 2px dashed var(--zone-rim);
+  border-radius: max(calc(1 * var(--u)), 10px);
+  font-weight: 700;
+  font-size: max(calc(1.3 * var(--u)), 13px);
+  color: var(--ink-soft);
+}
+
+.qmatch-tray.over,
+.qmatch-group.over,
+.choosing .qmatch-group {
+  border-color: var(--focus);
+  background: rgb(47 127 209 / 14%);
+}
+
+.qmatch-group.over .qmatch-drop,
+.choosing .qmatch-drop {
+  border-color: var(--focus);
+  color: var(--focus);
+}
+
+.qmatch-name {
+  min-width: 0;
+  overflow-wrap: anywhere; /* a name too long for its half wraps rather than being cut */
+  border: 0;
+  border-radius: 999px;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(1.7 * var(--u)), 15px);
+  color: #fff;
+  background: var(--ink-soft);
+}
+
+/* A tile fills its cell; long titles wrap inside it. -webkit-touch-callout: a long press on an iPhone must not
+   open the callout, which would cancel the drag. */
+.qmatch-item {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--tile-h);
+  margin: 0;
+  padding: 0.45em 0.35em;
+  border: 2px solid var(--chip-rim);
+  border-radius: max(calc(1 * var(--u)), 10px);
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  font: inherit;
+  font-weight: 800;
+  font-size: var(--tile-font);
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: var(--ink);
+  background: var(--chip);
+  box-shadow: 0 2px 4px rgb(30 70 130 / 18%);
+}
+
+.qmatch-item[aria-pressed="true"] {
+  border-color: var(--focus);
+  background: #e3f0ff;
+  box-shadow: 0 0 0 3px rgb(47 127 209 / 35%);
+}
+
+/* While dragged, the tile stays where it was, faded, and the ghost (on the page, outside the box) follows. */
+.qmatch-item.lifted {
+  opacity: 0.35;
+  box-shadow: none;
+}
+
+.qmatch-ghost {
+  position: fixed;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  pointer-events: none;
+  cursor: grabbing;
+  font-family: var(--font-body);
+  background: #fff; /* opaque, so the faded tile under it doesn't show through */
+  box-shadow: 0 8px 18px rgb(30 70 130 / 35%);
+}
+
+/* Very narrow boxes: one tile to a row in the tray too, and smaller headings, tiles and gaps so a group's
+   heading and titles fit its half of the width. */
+@media (max-width: 340px) {
+  :root {
+    --tile-font: 13px;
+  }
+
+  .qmatch-tray .qmatch-slot {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .qmatch-tray .qmatch-item:last-child:nth-child(odd) {
+    width: 100%;
+  }
+
+  .qmatch-groups {
+    gap: 6px;
+  }
+
+  .qmatch-group {
+    padding: 4px;
+  }
+
+  .qmatch-name {
+    font-size: 12px;
+    padding: 0.3em 0.25em;
+  }
+
+  .qmatch-item {
+    padding: 0.45em 0.2em;
+  }
+}
+
+/* ---- Phone keyboard (game.js puts "keyboard" on <html>): the box rests just above the keys ---- */
+
+/* The slot is the visible part above the keyboard, as game.js measured it in the slot's layer (--vv-top down,
+   --vv-h tall), and the box sits on its bottom; a box still too tall (its picture already at the smallest) runs
+   off the top, the timer first, never over the field. */
+.keyboard .q-slot {
+  top: calc(var(--vv-top) + 8px);
+  bottom: auto;
+  height: calc(var(--vv-h) - 16px);
+  justify-content: flex-end;
+}
+
+.keyboard .qgroup {
+  margin: 0 auto;
+}
+
+/* The dial gives up some size to the room above the keys. */
+.keyboard .timer {
+  width: clamp(80px, calc(0.3 * var(--vv-h)), 140px);
+}
+
+/* Submit back beside the field: one row less to fit above the keys. */
+.keyboard .qrow {
+  flex-direction: row;
+}
+
+/* ---- Timer: the colour arc, the number, the blue arc of extra time and the red pulse of the last 5 seconds ---- */
+
+/* game.js sets the dial's data-time: extra (blue time left), go (above 20 s), warn (20 s down to just above 10 s),
+   hot (10 s and under). */
+.dial-arc {
+  stroke: var(--time-go);
+}
+
+.dial[data-time="warn"] .dial-arc {
+  stroke: var(--time-warn);
+}
+
+.dial[data-time="hot"] .dial-arc {
+  stroke: var(--time-hot);
+}
+
+.dial-num {
+  fill: #f4f1e6;
+}
+
+.dial[data-time="extra"] .dial-num {
+  fill: #7cc4ff;
+}
+
+.dial[data-time="hot"] .dial-num {
+  fill: #ff6a5c;
+}
+
+.dial-extra {
+  stroke: var(--extra-time);
+}
+
+.dial-ring {
+  stroke: var(--time-hot);
+  opacity: 0;
+}
+
+/* At 5 s and under (game.js "urgent" on the group), twice a second: the box's rim glows red, the dial's outer ring
+   beats red and the number thumps. */
+.qgroup.urgent .qbox {
+  animation: glow 0.5s ease-in-out infinite;
+}
+
+.qgroup.urgent .dial-ring {
+  animation: ringbeat 0.5s ease-in-out infinite;
+}
+
+.qgroup.urgent .dial-window {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: thump 0.5s ease-in-out infinite;
+}
+
+/* ---- The crash: balloons burst, strings fall away ---- */
+
+.bunch-anchor svg g.bal-pop {
+  transform-box: fill-box;
+  transform-origin: 50% 60%;
+  animation: burst 0.35s ease-out forwards;
+}
+
+.bunch-anchor svg.popping > path {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+/* ---- Reveal ---- */
+
+.qreveal,
+.qexample,
+.qend {
+  display: grid;
+  justify-items: center;
+  gap: max(calc(0.8 * var(--u)), 10px);
+}
+
+.qverdict {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(2.3 * var(--u)), 20px);
+  line-height: 1.2;
+}
+
+.qverdict[data-verdict="right"] {
+  color: var(--right);
+}
+
+.qverdict[data-verdict="wrong"] {
+  color: var(--wrong);
+}
+
+.qright {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(1.8 * var(--u)), 16px);
+}
+
+.qright b {
+  font-weight: 800;
+}
+
+.qreveal-pics,
+.qexample-pics {
+  justify-self: stretch;
+}
+
+/* ---- Example card ---- */
+
+.qexample-explain,
+.qexample-note {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(1.6 * var(--u)), 15px);
+  line-height: 1.35;
+}
+
+.qexample-note {
+  font-size: max(calc(1.35 * var(--u)), 13px);
+  color: var(--ink-soft);
+}
+
+/* ---- End screen ---- */
+
+.qend-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(2.8 * var(--u)), 22px);
+  line-height: 1.15;
+}
+
+.qend-height {
+  white-space: nowrap;
+}
+
+.qend-row {
+  margin: 0;
+  font-size: max(calc(3 * var(--u)), 26px);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.qend-share {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qend-copied {
+  font-weight: 800;
+  color: var(--right);
+}
+
+.qend-text {
+  justify-self: stretch;
+  font: inherit;
+  font-weight: 700;
+  resize: none;
+  border-radius: 10px;
+}
+
+.qend-stats {
+  justify-self: stretch;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.qend-stats div {
+  display: grid;
+  gap: 2px;
+  padding: 6px 4px;
+  background: rgb(255 255 255 / 40%);
+  border-radius: 10px;
+}
+
+.qend-stats dt {
+  font-weight: 700;
+  font-size: max(calc(1.25 * var(--u)), 12px);
+  color: var(--ink-soft);
+}
+
+.qend-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: max(calc(2 * var(--u)), 17px);
+}
+
+.qend-next {
+  margin: 0;
+  font-weight: 700;
+  font-size: max(calc(1.5 * var(--u)), 14px);
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 560px) {
+  .qrow {
+    flex-direction: column;
+  }
+
+  .qend-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* The box's own shadow (start.css) stays under the red rim. */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgb(255 59 48 / 0%),
+      0 calc(1 * var(--u)) calc(2.4 * var(--u)) var(--glass-shadow);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 7px rgb(255 59 48 / 55%),
+      0 calc(1 * var(--u)) calc(2.4 * var(--u)) var(--glass-shadow);
+  }
+}
+
+@keyframes ringbeat {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes thump {
+  50% {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes burst {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  40% {
+    transform: scale(1.35);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Reduced motion: at 5 s and under the rim and the ring are simply red (the number still counts), and balloons
+   vanish without bursting (start.js). */
+@media (prefers-reduced-motion: reduce) {
+  .qgroup.urgent .qbox,
+  .qgroup.urgent .dial-ring,
+  .qgroup.urgent .dial-window {
+    animation: none;
+  }
+
+  .qgroup.urgent .qbox {
+    box-shadow:
+      0 0 0 5px rgb(255 59 48 / 55%),
+      0 calc(1 * var(--u)) calc(2.4 * var(--u)) var(--glass-shadow);
+  }
+
+  .qgroup.urgent .dial-ring {
+    opacity: 0.9;
+  }
+
+  .bunch-anchor svg.popping > path {
+    transition: none;
+  }
+}

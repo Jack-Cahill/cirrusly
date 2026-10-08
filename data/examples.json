@@ -1,0 +1,39 @@
+{
+  "rebus": {
+    "title": "Rebus puzzle",
+    "text": "Solve this rebus puzzle",
+    "images": [{ "src": "img/q/sample/puzzles-c1-p010-a-1.png", "alt": "HE’S and HIMSELF side by side, split by a slash" }],
+    "answer": "He’s Beside Himself",
+    "explain": "Look at where the words sit and how they are written: HE’S is beside HIMSELF."
+  },
+  "rhyming": {
+    "title": "Rhyming mashup",
+    "text": "Rhyming Mashup: Artificial Reptile",
+    "answer": "Fake Snake",
+    "explain": "Swap each word for one that means the same, so the two answers rhyme: artificial is fake, a reptile is a snake."
+  },
+  "name": {
+    "title": "Name mashup",
+    "text": "Name Mashup: Teen detective of mystery novels who starred in E.T.",
+    "answer": "Nancy Drew Barrymore",
+    "explain": "Two famous names that share a word, joined on it: Nancy Drew + Drew Barrymore."
+  },
+  "soundalike-countries": {
+    "title": "Sound-alike country",
+    "text": "Identify the country represented by the word puzzle: Male Cow + Mr. Busey + A",
+    "answer": "Bulgaria",
+    "explain": "Answer each clue, then say the pieces out loud: Bull + Gary + A sounds like Bulgaria."
+  },
+  "soundalike-cities": {
+    "title": "Sound-alike city",
+    "text": "Identify the international city represented by the word puzzle: Window Material + Chinese Strategy Game",
+    "answer": "Glasgow",
+    "explain": "Answer each clue, then say the pieces out loud: Glass + Go sounds like Glasgow."
+  },
+  "crossword": {
+    "title": "Crossword clue",
+    "text": "Breads, cakes, etc.: _ _ K E _ _ O _ D _",
+    "answer": "BAKEDGOODS",
+    "explain": "Each _ is one missing letter. The whole answer goes in as ONE piece, even when it is more than one word: BAKEDGOODS. Typing BAKED GOODS counts too."
+  }
+}
