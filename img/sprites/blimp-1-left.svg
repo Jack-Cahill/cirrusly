@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+<!-- BL1 facing left: silver with a coral band and cirrusly lettering -->
+<defs>
+  <linearGradient id="bl1-env" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2f5fa"/><stop offset="1" stop-color="#9aa5b8"/></linearGradient>
+  <linearGradient id="bl1-fin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a6e"/><stop offset="1" stop-color="#e0523f"/></linearGradient>
+  <linearGradient id="bl1-gon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#a9b3c5"/></linearGradient>
+  <radialGradient id="bl1-shine" cx="0.4" cy="0.2" r="0.7"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <clipPath id="bl1-clip"><path d="M272,64 C272,34 232,20 170,20 C100,20 52,34 30,58 Q26,64 30,70 C52,94 100,108 170,108 C232,108 272,94 272,64 Z"/></clipPath>
+</defs>
+<g transform="translate(300,0) scale(-1,1)">
+<path d="M64,36 L40,6 L72,6 L100,28 Z" fill="url(#bl1-fin)"/>
+<path d="M272,64 C272,34 232,20 170,20 C100,20 52,34 30,58 Q26,64 30,70 C52,94 100,108 170,108 C232,108 272,94 272,64 Z" fill="url(#bl1-env)"/>
+<g clip-path="url(#bl1-clip)">
+<rect x="0" y="80" width="300" height="10" fill="#ff7a59" opacity="1"/>
+<ellipse cx="160" cy="36" rx="110" ry="22" fill="url(#bl1-shine)"/>
+</g>
+<path d="M271,58.0 Q262,37.0 252,34.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,61.0 Q262,50.5 252,49.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,64.0 Q262,64.0 252,64.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,67.0 Q262,77.5 252,79.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,70.0 Q262,91.0 252,94.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<circle cx="270" cy="64" r="3" fill="#e0523f"/>
+
+<path d="M64,92 L40,122 L72,122 L100,100 Z" fill="url(#bl1-fin)"/>
+<path d="M58,66 L18,80 L40,86 L96,74 Z" fill="url(#bl1-fin)"/>
+<path d="M150,104 L204,104 Q212,106 210,114 Q206,122 196,122 L158,122 Q148,120 150,104 Z" fill="url(#bl1-gon)"/>
+<rect x="160" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="170" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="180" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="190" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="200" y="108" width="6" height="6" rx="2" fill="#3a5580"/>
+<rect x="130" y="110" width="22" height="9" rx="4.5" fill="url(#bl1-gon)"/><path d="M146,114 L152,114" stroke="#8a93a8" stroke-width="3"/>
+<ellipse cx="128" cy="114.5" rx="2.5" ry="12" fill="#dfe5ee" opacity="0.55"/><circle cx="128" cy="114.5" r="2" fill="#6b7390"/>
+
+</g>
+<text x="136" y="72" text-anchor="middle" font-family="Nunito, 'Arial Rounded MT Bold', Verdana, sans-serif" font-weight="800" font-size="22" fill="#2d3a5c" letter-spacing="1">cirrusly</text>
+</svg>

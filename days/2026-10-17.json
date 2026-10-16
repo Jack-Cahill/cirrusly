@@ -1,0 +1,146 @@
+{
+  "label": "B#2",
+  "date": "2026-10-17",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created this piece",
+      "images": [
+        {
+          "src": "img/q/2026-10-17/art-c1-p001-a-1.webp",
+          "alt": "A painting of a green footbridge over a pond of water lilies"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Claude Monet",
+            "Monet",
+            "Oscar-Claude Monet"
+          ],
+          "reject": [
+            "Manet"
+          ],
+          "close": [
+            "Claude"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Claude Monet"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This state’s 10 most populated cities include Athens, Columbus, and Augusta",
+      "parts": [
+        {
+          "accept": [
+            "Georgia",
+            "GA"
+          ]
+        }
+      ],
+      "answer": "Georgia"
+    },
+    {
+      "level": 3,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "These plain-looking, vanilla-flavored cookies are shaped like discs and come in a yellow box with red print",
+      "parts": [
+        {
+          "accept": [
+            "Nilla Wafers",
+            "Nilla"
+          ],
+          "close": [
+            "Vanilla Wafers",
+            "Vanilla Wafer"
+          ],
+          "hint": "What's the brand name?"
+        }
+      ],
+      "answer": "Nilla Wafers"
+    },
+    {
+      "level": 4,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 2001 movie: A thirty-something woman decides to take control of her life by writing it all down, including a love triangle between her charming boss and a standoffish lawyer",
+      "parts": [
+        {
+          "accept": [
+            "Bridget Jones’s Diary",
+            "Bridget Jones"
+          ],
+          "reject": [
+            "Bridget Jones’s Baby"
+          ]
+        }
+      ],
+      "answer": "Bridget Jones’s Diary"
+    },
+    {
+      "level": 5,
+      "category": "History",
+      "style": "typed",
+      "text": "This Mesopotamian script is named for the wedge-shaped marks that form its signs",
+      "parts": [
+        {
+          "accept": [
+            "Cuneiform"
+          ]
+        }
+      ],
+      "answer": "Cuneiform"
+    },
+    {
+      "level": 6,
+      "category": "TV",
+      "style": "typed",
+      "text": "This Netflix reality dating series had contestants date and get to know each other without ever seeing what the other person looks like",
+      "parts": [
+        {
+          "accept": [
+            "Love is Blind"
+          ],
+          "reject": [
+            "Love Island"
+          ]
+        }
+      ],
+      "answer": "Love is Blind"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name the NBA team based on their 2025-26 players: Pascal Siakam, Andrew Nembhard, Jarace Walker",
+      "parts": [
+        {
+          "accept": [
+            "Indiana Pacers",
+            "Pacers",
+            "Indy Pacers",
+            "Indianapolis Pacers"
+          ],
+          "reject": [
+            "Packers",
+            "Indians"
+          ],
+          "close": [
+            "Indiana",
+            "Indy",
+            "Indianapolis"
+          ],
+          "hint": "Add the team name"
+        }
+      ],
+      "answer": "Indiana Pacers"
+    }
+  ]
+}

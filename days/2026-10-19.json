@@ -1,0 +1,156 @@
+{
+  "label": "#1",
+  "date": "2026-10-19",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Science",
+      "style": "typed",
+      "text": "Chinstrap, macaroni, and rockhopper are all types of what animal?",
+      "parts": [
+        {
+          "accept": [
+            "Penguins"
+          ]
+        }
+      ],
+      "answer": "Penguins"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "match",
+      "text": "Match these states and capitals",
+      "groups": [
+        "Saint Paul",
+        "Des Moines",
+        "Lansing"
+      ],
+      "items": [
+        {
+          "text": "Michigan",
+          "group": 2
+        },
+        {
+          "text": "Minnesota",
+          "group": 0
+        },
+        {
+          "text": "Iowa",
+          "group": 1
+        }
+      ],
+      "answer": "Lansing, Michigan — Saint Paul, Minnesota — Des Moines, Iowa"
+    },
+    {
+      "level": 3,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Prior to the Dallas Cowboys, Mike McCarthy spent 13 years coaching this team, winning 1 Super Bowl",
+      "parts": [
+        {
+          "accept": [
+            "Green Bay Packers",
+            "Packers"
+          ],
+          "close": [
+            "Green Bay"
+          ],
+          "hint": "Add the team name"
+        }
+      ],
+      "answer": "Green Bay Packers"
+    },
+    {
+      "level": 4,
+      "category": "Puzzles",
+      "style": "typed",
+      "text": "Solve this rebus puzzle",
+      "example": "rebus",
+      "images": [
+        {
+          "src": "img/q/2026-10-19/puzzles-c1-p001-a-1.webp",
+          "alt": "The word Pack written backwards"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Backpack"
+          ]
+        }
+      ],
+      "answer": "Backpack"
+    },
+    {
+      "level": 5,
+      "category": "General Knowledge",
+      "style": "typed",
+      "text": "Identify the model of this car",
+      "images": [
+        {
+          "src": "img/q/2026-10-19/general-c1-p001-a-1.webp",
+          "alt": "A dark grey SUV with a slotted grille, seen from the front left"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Grand Cherokee",
+            "Jeep Grand Cherokee"
+          ],
+          "close": [
+            "Jeep"
+          ],
+          "hint": "Name the model",
+          "extra": true
+        }
+      ],
+      "answer": "Grand Cherokee (Jeep)"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Identify these two logos",
+      "images": [
+        {
+          "src": "img/q/2026-10-19/brands-c1-n008-a-x1.webp",
+          "alt": "A light blue eagle with its wings spread"
+        },
+        {
+          "src": "img/q/2026-10-19/brands-c1-n008-a-x2.webp",
+          "alt": "A blue letter S with a white line running through it, the rest of the word hidden"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Barclays"
+          ]
+        },
+        {
+          "accept": [
+            "Sega"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Barclays & Sega"
+    },
+    {
+      "level": 7,
+      "category": "Toys & Games",
+      "style": "typed",
+      "text": "In this 2014 video game with short-lived success, players controlled pilots that battled in parkour-style combat as well as mech fighters that came down from the sky",
+      "parts": [
+        {
+          "accept": [
+            "Titanfall"
+          ]
+        }
+      ],
+      "answer": "Titanfall"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "label": "B#1",
+  "date": "2026-10-16",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1975 comedy movie: King Arthur and his knights go on a hilarious quest for a Christian Artifact",
+      "parts": [
+        {
+          "accept": [
+            "Monty Python and the Holy Grail",
+            "Monty Python Holy Grail",
+            "Holy Grail"
+          ],
+          "close": [
+            "Monty Python"
+          ],
+          "hint": "Which Monty Python film?"
+        }
+      ],
+      "answer": "Monty Python and the Holy Grail"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this comedy TV series based on its cast: Joel McHale, Alison Brie, and Chevy Chase",
+      "parts": [
+        {
+          "accept": [
+            "Community"
+          ]
+        }
+      ],
+      "answer": "Community"
+    },
+    {
+      "level": 3,
+      "category": "Science",
+      "style": "multi",
+      "text": "Identify these two elements: Si, F",
+      "parts": [
+        {
+          "label": "Si",
+          "accept": [
+            "Silicon"
+          ]
+        },
+        {
+          "label": "F",
+          "accept": [
+            "Fluorine"
+          ],
+          "reject": [
+            "Chlorine"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Silicon and Fluorine"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Land measure: _ C R _ _ G _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "ACREAGE"
+          ],
+          "close": [
+            "AEAE"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "ACREAGE"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This country is the largest in Africa by landmass",
+      "parts": [
+        {
+          "accept": [
+            "Algeria"
+          ],
+          "reject": [
+            "Nigeria"
+          ]
+        }
+      ],
+      "answer": "Algeria"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name the NBA player whose career went: Pacers → Thunder → Clippers → 76ers → Celtics",
+      "parts": [
+        {
+          "accept": [
+            "Paul George",
+            "PG13",
+            "PG"
+          ],
+          "reject": [
+            "Paul Pierce"
+          ],
+          "close": [
+            "George"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Paul George"
+    },
+    {
+      "level": 7,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Identify these two logos",
+      "images": [
+        {
+          "src": "img/q/2026-10-16/brands-c2-n009-a-x1.webp",
+          "alt": "A man in a wide-brimmed hat between the numbers 19 and 42, above a blotted-out word and a curly flourish"
+        },
+        {
+          "src": "img/q/2026-10-16/brands-c2-n009-a-x2.webp",
+          "alt": "A red slanted stroke and a red letter N above a blue bar, framed by a thin blue border"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Don Julio"
+          ]
+        },
+        {
+          "accept": [
+            "Exxon",
+            "ExxonMobil"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Don Julio & Exxon",
+      "reveal": [
+        {
+          "src": "img/q/2026-10-16/brands-c2-n009-a-x3.webp",
+          "alt": "The Don Julio tequila logo"
+        },
+        {
+          "src": "img/q/2026-10-16/brands-c2-n009-a-x4.webp",
+          "alt": "The Exxon logo"
+        }
+      ]
+    }
+  ]
+}

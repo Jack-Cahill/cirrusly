@@ -1,0 +1,187 @@
+{
+  "label": "B#3",
+  "date": "2026-10-18",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the movie based on its lead cast: Leonardo DiCaprio, Matt Damon, Mark Wahlberg and Jack Nicholson",
+      "parts": [
+        {
+          "accept": [
+            "The Departed"
+          ]
+        }
+      ],
+      "answer": "The Departed"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name the TV series based on its cast: Ellen Pompeo, Patrick Dempsey, and Sandra Oh",
+      "parts": [
+        {
+          "accept": [
+            "Grey’s Anatomy",
+            "Grey’s"
+          ]
+        }
+      ],
+      "answer": "Grey’s Anatomy"
+    },
+    {
+      "level": 3,
+      "category": "Retail & Fashion",
+      "style": "typed",
+      "text": "This major retailer dropped its slogan “At the corner of happy & healthy” in 2017",
+      "parts": [
+        {
+          "accept": [
+            "Walgreens"
+          ]
+        }
+      ],
+      "answer": "Walgreens"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Put a cap on: _ I _ I _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "LIMIT"
+          ],
+          "close": [
+            "LMT"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "LIMIT"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Papua New Guinea shares the island of New Guinea with what country?",
+      "parts": [
+        {
+          "accept": [
+            "Indonesia"
+          ]
+        }
+      ],
+      "answer": "Indonesia"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "multi",
+      "text": "Identify the D1 colleges based on their team’s nickname: Gamecocks, Cavaliers, and Wolverines",
+      "parts": [
+        {
+          "label": "Gamecocks",
+          "accept": [
+            "South Carolina",
+            "S Carolina",
+            "S. Carolina",
+            "South Carolina Gamecocks",
+            "University of South Carolina",
+            "USC",
+            "U of SC",
+            "USC Gamecocks"
+          ],
+          "reject": [
+            "North Carolina",
+            "N Carolina",
+            "North Carolina Gamecocks",
+            "University of North Carolina"
+          ],
+          "close": [
+            "Carolina"
+          ],
+          "hint": "Which Carolina?"
+        },
+        {
+          "label": "Cavaliers",
+          "accept": [
+            "Virginia",
+            "Virginia Cavaliers",
+            "University of Virginia",
+            "UVA",
+            "UVA Cavaliers",
+            "U of Virginia"
+          ]
+        },
+        {
+          "label": "Wolverines",
+          "accept": [
+            "Michigan",
+            "Michigan Wolverines",
+            "University of Michigan",
+            "U of M",
+            "UMich",
+            "U of Mich",
+            "Mich",
+            "U of Michigan"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "South Carolina Gamecocks, Virginia Cavaliers, and Michigan Wolverines"
+    },
+    {
+      "level": 7,
+      "category": "News & Celebs",
+      "style": "multi",
+      "text": "Identify these three celebrities",
+      "images": [
+        {
+          "src": "img/q/2026-10-18/celebs-c1-p001-a-1.webp",
+          "alt": "A smiling woman with long wavy brown hair and sparkling drop earrings"
+        },
+        {
+          "src": "img/q/2026-10-18/celebs-c1-p001-a-2.webp",
+          "alt": "A young man with a dark quiff, stubble and a nose ring, in a pink jacket"
+        },
+        {
+          "src": "img/q/2026-10-18/celebs-c1-p001-a-3.webp",
+          "alt": "A smiling woman with a long side braid and a hoop earring, in a striped top"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Tina Fey",
+            "Fey"
+          ]
+        },
+        {
+          "accept": [
+            "Zayn Malik",
+            "Zayn",
+            "Malik"
+          ]
+        },
+        {
+          "accept": [
+            "Quinta Brunson",
+            "Brunson"
+          ],
+          "close": [
+            "Quinta"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "order": "fixed",
+      "answer": "Tina Fey, Zayn Malik, Quinta Brunson"
+    }
+  ]
+}
