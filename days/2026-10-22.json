@@ -1,0 +1,187 @@
+{
+  "label": "#4",
+  "date": "2026-10-22",
+  "prev_date": "2026-10-21",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the actor based on their filmography: Flight, The Book of Eli, and Remember the Titans",
+      "parts": [
+        {
+          "accept": [
+            "Denzel Washington",
+            "Washington",
+            "Denzel"
+          ]
+        }
+      ],
+      "answer": "Denzel Washington"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this CBS TV series that spanned 11 seasons and followed a mobile surgical unit during the Korean War",
+      "parts": [
+        {
+          "accept": [
+            "M*A*S*H"
+          ]
+        }
+      ],
+      "answer": "M*A*S*H"
+    },
+    {
+      "level": 3,
+      "category": "Science",
+      "style": "typed",
+      "text": "What is the name for a shape with 7 sides?",
+      "parts": [
+        {
+          "accept": [
+            "Heptagon",
+            "Septagon"
+          ],
+          "reject": [
+            "Hexagon",
+            "Octagon",
+            "Pentagon",
+            "Heptagram"
+          ]
+        }
+      ],
+      "answer": "Heptagon"
+    },
+    {
+      "level": 4,
+      "category": "Retail & Fashion",
+      "style": "multi",
+      "text": "Identify the country of origin of each of these high-fashion brands: Chanel, Prada, Ralph Lauren",
+      "parts": [
+        {
+          "label": "Chanel",
+          "accept": [
+            "France"
+          ],
+          "close": [
+            "Paris"
+          ],
+          "hint": "Name the country"
+        },
+        {
+          "label": "Prada",
+          "accept": [
+            "Italy"
+          ],
+          "close": [
+            "Milan"
+          ],
+          "hint": "Name the country"
+        },
+        {
+          "label": "Ralph Lauren",
+          "accept": [
+            "U.S.",
+            "USA",
+            "United States",
+            "United States of America",
+            "America"
+          ],
+          "close": [
+            "New York",
+            "New York City",
+            "NYC",
+            "NY"
+          ],
+          "hint": "Name the country"
+        }
+      ],
+      "order": "fixed",
+      "answer": "Chanel: France — Prada: Italy — Ralph Lauren: U.S."
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name either the landmark or the country it’s located in",
+      "images": [
+        {
+          "src": "img/q/2026-10-22/geography-c3-p011-a-1.webp",
+          "alt": "A mud-brick mosque with cone-shaped towers bristling with wooden poles, in a sandy desert town"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Timbuktu (Mali)",
+            "Timbuktu",
+            "Mali",
+            "Tombouctou",
+            "Timbuctoo",
+            "Djinguereber Mosque",
+            "Djinguereber",
+            "Great Mosque of Timbuktu",
+            "Timbuktu Mosque"
+          ]
+        }
+      ],
+      "answer": "Timbuktu (Mali)"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Identify these two logos",
+      "images": [
+        {
+          "src": "img/q/2026-10-22/brands-c1-n007-a-x1.webp",
+          "alt": "A blue letter U filled with small shapes: a sun, a bird, a palm tree, a fish, a heart and more"
+        },
+        {
+          "src": "img/q/2026-10-22/brands-c1-n007-a-x2.webp",
+          "alt": "A gold letter H in a gold frame on a red square"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Unilever"
+          ]
+        },
+        {
+          "accept": [
+            "History",
+            "History Channel"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Unilever & History"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Borussia Dortmund lost to what domestic rival in the 2013 Champions League Final?",
+      "parts": [
+        {
+          "accept": [
+            "Bayern Munich",
+            "Bayern",
+            "Bayern München",
+            "FC Bayern",
+            "FC Bayern Munich",
+            "Munich",
+            "München"
+          ],
+          "reject": [
+            "Bayer"
+          ]
+        }
+      ],
+      "answer": "Bayern Munich"
+    }
+  ]
+}

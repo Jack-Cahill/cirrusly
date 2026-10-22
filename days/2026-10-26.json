@@ -1,0 +1,139 @@
+{
+  "label": "#8",
+  "date": "2026-10-26",
+  "prev_date": "2026-10-25",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1980 parody movie: chaos ensues aboard a flight after the passengers and crew fall ill from food poisoning",
+      "parts": [
+        {
+          "accept": [
+            "Airplane!"
+          ],
+          "reject": [
+            "Airplane II",
+            "Plane"
+          ]
+        }
+      ],
+      "answer": "Airplane!"
+    },
+    {
+      "level": 2,
+      "category": "Technology",
+      "style": "typed",
+      "text": "On Windows, pressing “Ctrl + C” copies. Which Windows keyboard shortcut allows you to easily switch between open applications without using your mouse?",
+      "parts": [
+        {
+          "accept": [
+            "Alt + Tab",
+            "Alt Tab",
+            "Alt and Tab",
+            "Windows + Tab",
+            "Windows Tab",
+            "Win + Tab",
+            "Win Tab",
+            "Alt + Esc",
+            "Alt Esc"
+          ],
+          "reject": [
+            "Ctrl + Tab"
+          ]
+        }
+      ],
+      "answer": "Alt + Tab"
+    },
+    {
+      "level": 3,
+      "category": "Science",
+      "style": "typed",
+      "text": "This constellation gained the nickname “The Princess” from Greek mythology and contains the red giant star, Mirach, which can be used to find this constellation’s related galaxy",
+      "parts": [
+        {
+          "accept": [
+            "Andromeda"
+          ]
+        }
+      ],
+      "answer": "Andromeda"
+    },
+    {
+      "level": 4,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "This fast-food sandwich restaurant is known for their Billy Club, the Pepe, and Turkey Tom sandwiches",
+      "parts": [
+        {
+          "accept": [
+            "Jimmy John’s"
+          ],
+          "reject": [
+            "Jimmy Dean"
+          ]
+        }
+      ],
+      "answer": "Jimmy John’s"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name the most populated African city in this square",
+      "images": [
+        {
+          "src": "img/q/2026-10-26/geography-c3-p031-a-1.webp",
+          "alt": "A grey map of Africa with a large pink square over West Africa and the Sahara"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Lagos"
+          ],
+          "reject": [
+            "Laos"
+          ]
+        }
+      ],
+      "answer": "Lagos"
+    },
+    {
+      "level": 6,
+      "category": "Retail & Fashion",
+      "style": "typed",
+      "text": "Once operating about 2,800 locations in 23 states, this now-defunct drugstore chain was split up in 2004, with part sold to CVS and the rest ending up with Rite Aid in 2007",
+      "parts": [
+        {
+          "accept": [
+            "Eckerd",
+            "Eckerd Drugs",
+            "Eckerd Pharmacy"
+          ]
+        }
+      ],
+      "answer": "Eckerd"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name the European football (soccer) team based on their 2025-26 players: Lautaro Martínez, Yann Sommer, and Nicolò Barella",
+      "parts": [
+        {
+          "accept": [
+            "Inter Milan",
+            "Inter",
+            "Internazionale"
+          ],
+          "reject": [
+            "Milan"
+          ]
+        }
+      ],
+      "answer": "Inter Milan"
+    }
+  ]
+}

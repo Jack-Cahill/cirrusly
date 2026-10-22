@@ -1,0 +1,40 @@
+/* The challenge page's own bits (challenge.js): the passphrase form in LIFTOFF's place, on the 0 m line. */
+.unlock {
+  position: absolute;
+  top: calc(100% + var(--blades-px));
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: min(340px, 90vw);
+}
+
+.unlock[hidden] {
+  display: none;
+}
+
+.unlock-pass {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0.5em 0.75em;
+  color: var(--ink);
+  background: var(--field, #fff);
+  border: 2px solid rgb(255 255 255 / 95%);
+  border-radius: 999px;
+}
+
+.unlock-note {
+  flex-basis: 100%;
+  margin: 0;
+  min-height: 1.3em;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+}

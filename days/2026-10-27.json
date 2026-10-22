@@ -1,0 +1,160 @@
+{
+  "label": "#9",
+  "date": "2026-10-27",
+  "prev_date": "2026-10-26",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Religion & Culture",
+      "style": "typed",
+      "text": "This Greek ‘God of War’ is the son of Zeus and Hera and embodies the physical valor necessary for success as well as sheer brutality and bloodlust",
+      "parts": [
+        {
+          "accept": [
+            "Ares",
+            "Aries"
+          ]
+        }
+      ],
+      "answer": "Ares"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this ABC Family (Freeform) TV series: Aria, Hanna, Emily, and Spencer navigate a web of secrets after their friend Alison goes missing in the town of Rosewood",
+      "parts": [
+        {
+          "accept": [
+            "Pretty Little Liars",
+            "PLL"
+          ]
+        }
+      ],
+      "answer": "Pretty Little Liars"
+    },
+    {
+      "level": 3,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1998 movie starring Jeff Bridges: bowling-obsessed slacker gets caught up in a kidnapping and ransom scheme involving a millionaire of the same name",
+      "parts": [
+        {
+          "accept": [
+            "The Big Lebowski"
+          ],
+          "close": [
+            "Lebowski"
+          ]
+        }
+      ],
+      "answer": "The Big Lebowski"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "[Is this microphone working?]: T A _ _ A _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "TAPTAP",
+            "TAP TAP"
+          ],
+          "close": [
+            "PTP"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "TAPTAP"
+    },
+    {
+      "level": 5,
+      "category": "General Knowledge",
+      "style": "multi",
+      "text": "Identify these three stock tickers: MMM, ADBE, and BA",
+      "parts": [
+        {
+          "label": "MMM",
+          "accept": [
+            "3M",
+            "Minnesota Mining and Manufacturing",
+            "3M Company"
+          ]
+        },
+        {
+          "label": "ADBE",
+          "accept": [
+            "Adobe",
+            "Adobe Inc",
+            "Adobe Systems"
+          ]
+        },
+        {
+          "label": "BA",
+          "accept": [
+            "Boeing",
+            "Boeing Company"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "3M, Adobe, and Boeing"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Rowing in the Olympics has been long dominated by this country (counting its Cold War-era split teams), amassing almost double the gold medals of the next closest country",
+      "parts": [
+        {
+          "accept": [
+            "Germany",
+            "Deutschland",
+            "East Germany"
+          ]
+        }
+      ],
+      "answer": "Germany"
+    },
+    {
+      "level": 7,
+      "category": "Geography",
+      "style": "multi",
+      "text": "Identify these two countries",
+      "images": [
+        {
+          "src": "img/q/2026-10-27/geography-c1-p032-a-1.webp",
+          "alt": "A white flag with a dark blue cross set toward the left"
+        },
+        {
+          "src": "img/q/2026-10-27/geography-c1-p032-a-2.webp",
+          "alt": "A country's outline filled with a red flag bearing a yellow sun with eight spreading rays"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Finland"
+          ]
+        },
+        {
+          "accept": [
+            "North Macedonia",
+            "Macedonia",
+            "N. Macedonia"
+          ],
+          "reject": [
+            "South Macedonia",
+            "S. Macedonia"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Finland & (North) Macedonia"
+    }
+  ]
+}

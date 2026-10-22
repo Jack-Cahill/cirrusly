@@ -1,0 +1,112 @@
+{
+  "label": "#5",
+  "date": "2026-10-23",
+  "prev_date": "2026-10-22",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Toys & Games",
+      "style": "typed",
+      "text": "This Rube Goldberg-style board game includes pieces such as the yellow lamp post, red bathtub, and green crank",
+      "parts": [
+        {
+          "accept": [
+            "Mouse Trap"
+          ]
+        }
+      ],
+      "answer": "Mouse Trap"
+    },
+    {
+      "level": 2,
+      "category": "General Knowledge",
+      "style": "typed",
+      "text": "Also known as the Killer Clown, this serial killer confessed to murdering over 30 young men in the 1970s",
+      "parts": [
+        {
+          "accept": [
+            "John Wayne Gacy",
+            "John Gacy",
+            "Gacy",
+            "John Wayne"
+          ]
+        }
+      ],
+      "answer": "John Wayne Gacy"
+    },
+    {
+      "level": 3,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This Asian country’s 10 most populated cities include Jeddah, Dammam, and Medina",
+      "parts": [
+        {
+          "accept": [
+            "Saudi Arabia",
+            "Saudi"
+          ]
+        }
+      ],
+      "answer": "Saudi Arabia"
+    },
+    {
+      "level": 4,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1987 movie: Follows group of U.S. Marines during their brutal training and deployment during the Vietnam War revealing the dehumanization and trauma of combat",
+      "parts": [
+        {
+          "accept": [
+            "Full Metal Jacket",
+            "FMJ"
+          ]
+        }
+      ],
+      "answer": "Full Metal Jacket"
+    },
+    {
+      "level": 5,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name the HBO TV series (2016-2022) based on its characters: Dolores Abernathy, Bernard Lowe, and Dr. Robert Ford",
+      "parts": [
+        {
+          "accept": [
+            "Westworld"
+          ]
+        }
+      ],
+      "answer": "Westworld"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name this NFL team based on their 2026 players: Denzel Ward, Jerry Jeudy, and Quinshon Judkins",
+      "parts": [
+        {
+          "accept": [
+            "Cleveland Browns",
+            "Browns",
+            "Cleveland"
+          ]
+        }
+      ],
+      "answer": "Cleveland Browns"
+    },
+    {
+      "level": 7,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "Founded in North Carolina, this fast-food restaurant commonly features two drive-thrus and no indoor seating, and is known for its signature ‘Tray’ named after the restaurant",
+      "parts": [
+        {
+          "accept": [
+            "Cook Out"
+          ]
+        }
+      ],
+      "answer": "Cook Out"
+    }
+  ]
+}

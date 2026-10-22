@@ -1,0 +1,160 @@
+{
+  "label": "#3",
+  "date": "2026-10-21",
+  "prev_date": "2026-10-20",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created this piece",
+      "images": [
+        {
+          "src": "img/q/2026-10-21/art-c1-p003-a-1.webp",
+          "alt": "A wall painting of a man at the centre of a long table, with twelve companions gesturing on either side"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Leonardo da Vinci",
+            "da Vinci"
+          ],
+          "close": [
+            "Leonardo"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Leonardo da Vinci"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This European country’s 10 most populated cities include Basel, Lucerne, and Zurich",
+      "parts": [
+        {
+          "accept": [
+            "Switzerland",
+            "Swiss"
+          ],
+          "reject": [
+            "Swaziland"
+          ]
+        }
+      ],
+      "answer": "Switzerland"
+    },
+    {
+      "level": 3,
+      "category": "Sports",
+      "style": "match",
+      "text": "Match the MLB team with their current star player",
+      "groups": [
+        "Angels",
+        "Braves",
+        "Padres"
+      ],
+      "items": [
+        {
+          "text": "Mike Trout",
+          "group": 0
+        },
+        {
+          "text": "Manny Machado",
+          "group": 2
+        },
+        {
+          "text": "Ronald Acuña Jr",
+          "group": 1
+        }
+      ],
+      "answer": "Mike Trout, Angels – Manny Machado, Padres – Ronald Acuña Jr, Braves"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Pitch perfect: _ N K _ _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "ONKEY",
+            "ON KEY"
+          ],
+          "close": [
+            "OEY"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "ONKEY"
+    },
+    {
+      "level": 5,
+      "category": "History",
+      "style": "typed",
+      "text": "The ___ Compact was the first framework of government written and enacted in the territory that is now the USA",
+      "parts": [
+        {
+          "accept": [
+            "The Mayflower Compact",
+            "Mayflower"
+          ]
+        }
+      ],
+      "answer": "The Mayflower Compact"
+    },
+    {
+      "level": 6,
+      "category": "Religion & Culture",
+      "style": "typed",
+      "text": "In what country was the samba invented?",
+      "parts": [
+        {
+          "accept": [
+            "Brazil"
+          ]
+        }
+      ],
+      "answer": "Brazil"
+    },
+    {
+      "level": 7,
+      "category": "News & Celebs",
+      "style": "multi",
+      "text": "Identify these two celebrities",
+      "images": [
+        {
+          "src": "img/q/2026-10-21/celebs-c1-p002-a-1.webp",
+          "alt": "A young man with messy dark curly hair, in a suit and blue shirt, speaking at a microphone"
+        },
+        {
+          "src": "img/q/2026-10-21/celebs-c1-p002-a-2.webp",
+          "alt": "A smiling woman with long black hair, cross earrings and a dark brown jacket"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Sam Bankman-Fried",
+            "Bankman-Fried",
+            "SBF"
+          ]
+        },
+        {
+          "accept": [
+            "Blac Chyna",
+            "Chyna",
+            "Angela White"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Sam Bankman-Fried, Blac Chyna (Angela White)"
+    }
+  ]
+}

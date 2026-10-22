@@ -1,0 +1,215 @@
+{
+  "label": "#6",
+  "date": "2026-10-24",
+  "prev_date": "2026-10-23",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1989 movie starring Robin Williams: charismatic English teacher inspires his students to pursue their dreams",
+      "parts": [
+        {
+          "accept": [
+            "Dead Poets Society"
+          ],
+          "close": [
+            "Dead Poets"
+          ]
+        }
+      ],
+      "answer": "Dead Poets Society"
+    },
+    {
+      "level": 2,
+      "category": "History",
+      "style": "typed",
+      "text": "The United States conducted the failed “Bay of Pigs” invasion into what country?",
+      "parts": [
+        {
+          "accept": [
+            "Cuba"
+          ]
+        }
+      ],
+      "answer": "Cuba"
+    },
+    {
+      "level": 3,
+      "category": "News & Celebs",
+      "style": "multi",
+      "text": "Name 3 of the celebrities featured in the famous 2014 Oscar selfie",
+      "parts": [
+        {
+          "accept": [
+            "Ellen DeGeneres",
+            "DeGeneres",
+            "Ellen"
+          ]
+        },
+        {
+          "accept": [
+            "Jennifer Lawrence",
+            "Lawrence"
+          ]
+        },
+        {
+          "accept": [
+            "Meryl Streep",
+            "Streep"
+          ],
+          "close": [
+            "Meryl"
+          ],
+          "hint": "Give the full name"
+        },
+        {
+          "accept": [
+            "Brad Pitt",
+            "Pitt"
+          ]
+        },
+        {
+          "accept": [
+            "Bradley Cooper",
+            "Cooper"
+          ]
+        },
+        {
+          "accept": [
+            "Jared Leto",
+            "Leto"
+          ]
+        },
+        {
+          "accept": [
+            "Angelina Jolie",
+            "Jolie"
+          ],
+          "close": [
+            "Angelina"
+          ],
+          "hint": "Give the full name"
+        },
+        {
+          "accept": [
+            "Julia Roberts",
+            "Roberts"
+          ]
+        },
+        {
+          "accept": [
+            "Kevin Spacey",
+            "Spacey"
+          ]
+        },
+        {
+          "accept": [
+            "Lupita Nyong'o"
+          ],
+          "close": [
+            "Lupita"
+          ],
+          "hint": "Give the full name"
+        },
+        {
+          "accept": [
+            "Peter Nyong'o Jr.",
+            "Peter Nyong'o"
+          ]
+        },
+        {
+          "accept": [
+            "Channing Tatum",
+            "Tatum"
+          ],
+          "close": [
+            "Channing"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "order": "any",
+      "boxes": 3,
+      "answer": "Ellen DeGeneres, Jennifer Lawrence, Meryl Streep, Brad Pitt, Bradley Cooper, Jared Leto, Angelina Jolie, Julia Roberts, Kevin Spacey, Lupita Nyong'o, Peter Nyong'o Jr. and Channing Tatum"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Exasperated expressions: _ Y _ _ O _ L S",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "EYEROLLS",
+            "EYE ROLLS"
+          ],
+          "close": [
+            "EERL"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "EYEROLLS"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This country’s neighbors include Iraq, Turkey, and Jordan",
+      "parts": [
+        {
+          "accept": [
+            "Syria"
+          ],
+          "reject": [
+            "Serbia"
+          ]
+        }
+      ],
+      "answer": "Syria"
+    },
+    {
+      "level": 6,
+      "category": "Puzzles",
+      "style": "typed",
+      "text": "Solve this rebus puzzle",
+      "example": "rebus",
+      "images": [
+        {
+          "src": "img/q/2026-10-24/puzzles-c1-p005-a-1.webp",
+          "alt": "A capital L half sunk in the blue sea, bubbles rising, under a yellow sun and two birds"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Seal"
+          ]
+        }
+      ],
+      "answer": "Seal"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "This 2025-26 NFL playoff team beat the Steelers before falling to the Patriots",
+      "parts": [
+        {
+          "accept": [
+            "Houston Texans",
+            "Texans",
+            "Houston"
+          ],
+          "reject": [
+            "Titans"
+          ]
+        }
+      ],
+      "answer": "Houston Texans"
+    }
+  ]
+}

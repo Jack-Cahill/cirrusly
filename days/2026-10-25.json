@@ -1,0 +1,179 @@
+{
+  "label": "#7",
+  "date": "2026-10-25",
+  "prev_date": "2026-10-24",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created this piece",
+      "images": [
+        {
+          "src": "img/q/2026-10-25/art-c1-p006-a-1.webp",
+          "alt": "A grid of 32 small paintings of red and white soup cans, each a different flavour"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Andy Warhol",
+            "Warhol"
+          ],
+          "close": [
+            "Andy"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Andy Warhol"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "match",
+      "text": "Match these countries and capitals",
+      "groups": [
+        "Montevideo",
+        "Kingston",
+        "Bogotá"
+      ],
+      "items": [
+        {
+          "text": "Colombia",
+          "group": 2
+        },
+        {
+          "text": "Uruguay",
+          "group": 0
+        },
+        {
+          "text": "Jamaica",
+          "group": 1
+        }
+      ],
+      "answer": "Bogotá, Colombia — Montevideo, Uruguay — Kingston, Jamaica"
+    },
+    {
+      "level": 3,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name this European football (soccer) team based on their 2025-26 players: Lamine Yamal, Robert Lewandowski, Pedri",
+      "parts": [
+        {
+          "accept": [
+            "Barcelona",
+            "Barça",
+            "FC Barcelona",
+            "Barcelona FC",
+            "FC Barça"
+          ]
+        }
+      ],
+      "answer": "Barcelona"
+    },
+    {
+      "level": 4,
+      "category": "Language",
+      "style": "multi",
+      "text": "Translate these two Spanish verbs (to __): Jugar, Beber",
+      "parts": [
+        {
+          "label": "Jugar",
+          "accept": [
+            "To Play",
+            "Play"
+          ],
+          "reject": [
+            "To Pay",
+            "To Pray",
+            "To Plan"
+          ]
+        },
+        {
+          "label": "Beber",
+          "accept": [
+            "To Drink",
+            "Drink"
+          ],
+          "reject": [
+            "To Think",
+            "To Drive"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "To Play, To Drink"
+    },
+    {
+      "level": 5,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this anime series: a teenage boy is recruited by his father to pilot a giant bio-machine to fight monstrous beings known as “Angels”",
+      "parts": [
+        {
+          "accept": [
+            "Neon Genesis Evangelion",
+            "Evangelion"
+          ]
+        }
+      ],
+      "answer": "Neon Genesis Evangelion"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Name these two grocery store products",
+      "images": [
+        {
+          "src": "img/q/2026-10-25/brands-c1-n009-a-x1.webp",
+          "alt": "A jar of tomato and basil pasta sauce with an old-style label, its brand name hidden"
+        },
+        {
+          "src": "img/q/2026-10-25/brands-c1-n009-a-x2.webp",
+          "alt": "A yellow box of cinnamon brown sugar breakfast biscuits with cinnamon sticks and coffee, its name scrubbed out"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Classico"
+          ]
+        },
+        {
+          "accept": [
+            "Belvita"
+          ],
+          "close": [
+            "Nabisco"
+          ],
+          "hint": "Name the product, not the maker"
+        }
+      ],
+      "order": "fixed",
+      "answer": "Classico & Belvita"
+    },
+    {
+      "level": 7,
+      "category": "Mashup",
+      "style": "typed",
+      "text": "Name Mashup: “The Good” in ‘The Good, the Bad and the Ugly’ who starred in ‘White Men Can’t Jump’",
+      "example": "name",
+      "parts": [
+        {
+          "accept": [
+            "Clint Eastwoody Harrelson",
+            "Clint Eastwood Woody Harrelson"
+          ],
+          "close": [
+            "Clint Eastwood",
+            "Woody Harrelson"
+          ],
+          "hint": "Mash both names together"
+        }
+      ],
+      "answer": "Clint Eastwoody Harrelson"
+    }
+  ]
+}

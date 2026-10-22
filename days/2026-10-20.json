@@ -1,0 +1,169 @@
+{
+  "label": "#2",
+  "date": "2026-10-20",
+  "prev_date": "2026-10-19",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1996 movie: young girl with telekinetic abilities uses her powers to stand up against her cruel parents and tyrannical headmistress",
+      "parts": [
+        {
+          "accept": [
+            "Matilda"
+          ]
+        }
+      ],
+      "answer": "Matilda"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this TV series that ran for 7 seasons based on its characters: Betty Cooper, Archie Andrews, and Jughead",
+      "parts": [
+        {
+          "accept": [
+            "Riverdale"
+          ]
+        }
+      ],
+      "answer": "Riverdale"
+    },
+    {
+      "level": 3,
+      "category": "Technology",
+      "style": "typed",
+      "text": "Name this cell phone model",
+      "images": [
+        {
+          "src": "img/q/2026-10-20/technology-c1-p005-a-1.webp",
+          "alt": "Two thin silver flip phones, one open to show its keypad and one closed"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "RAZR",
+            "Razr V3",
+            "Motorola Razr",
+            "Moto Razr",
+            "Motorola Razr V3",
+            "Razor",
+            "Motorola Razor"
+          ],
+          "reject": [
+            "Razer"
+          ],
+          "close": [
+            "Motorola"
+          ],
+          "hint": "Name the model"
+        }
+      ],
+      "answer": "RAZR"
+    },
+    {
+      "level": 4,
+      "category": "Language",
+      "style": "typed",
+      "text": "What is the most widely spoken language across Kenya, Uganda, and Tanzania?",
+      "parts": [
+        {
+          "accept": [
+            "Swahili",
+            "Kiswahili"
+          ]
+        }
+      ],
+      "answer": "Swahili"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "multi",
+      "text": "Identify the two states based on their outlines",
+      "images": [
+        {
+          "src": "img/q/2026-10-20/geography-c2-p007-b-1.webp",
+          "alt": "The outline of a tall rectangle of a state with a curved notch at top left and a wavy river border at the bottom"
+        },
+        {
+          "src": "img/q/2026-10-20/geography-c2-p007-b-2.webp",
+          "alt": "The outline of a long, wide state with a pointed western end and a coast of inlets and barrier islands"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Indiana",
+            "IN"
+          ]
+        },
+        {
+          "accept": [
+            "North Carolina",
+            "NC",
+            "N. Carolina"
+          ],
+          "reject": [
+            "South Carolina",
+            "S. Carolina"
+          ],
+          "close": [
+            "Carolina"
+          ],
+          "hint": "Which Carolina?"
+        }
+      ],
+      "order": "fixed",
+      "answer": "Indiana & North Carolina"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "LSU defeated what team to win the 2019 College Football Championship?",
+      "parts": [
+        {
+          "accept": [
+            "Clemson",
+            "Clemson Tigers",
+            "Clemson University"
+          ]
+        }
+      ],
+      "answer": "Clemson"
+    },
+    {
+      "level": 7,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "What is the official name of this snack?",
+      "images": [
+        {
+          "src": "img/q/2026-10-20/food-c1-p023-a-1.webp",
+          "alt": "A blue bag of HOT FRIES corn and potato snacks with a cartoon man in a red flat cap"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Andy Capp’s",
+            "Andy Capp’s Hot Fries",
+            "Capps",
+            "Capps Hot Fries"
+          ],
+          "close": [
+            "Hot Fries",
+            "Andy",
+            "Andys"
+          ],
+          "hint": "Give the full brand name"
+        }
+      ],
+      "answer": "Andy Capp’s"
+    }
+  ]
+}
