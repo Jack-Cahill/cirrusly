@@ -1,0 +1,158 @@
+{
+  "label": "#15",
+  "date": "2026-11-02",
+  "prev_date": "2026-11-01",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1985 movie: group of kids embark on a treasure hunt to prevent their neighborhood from demolition",
+      "parts": [
+        {
+          "accept": [
+            "The Goonies"
+          ]
+        }
+      ],
+      "answer": "The Goonies"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "typed",
+      "text": "The Ural Mountains are primarily found in what country?",
+      "parts": [
+        {
+          "accept": [
+            "Russia",
+            "Russian Federation"
+          ]
+        }
+      ],
+      "answer": "Russia"
+    },
+    {
+      "level": 3,
+      "category": "Science",
+      "style": "typed",
+      "text": "What’s the common name for the molecule with the formula NH3",
+      "parts": [
+        {
+          "accept": [
+            "Ammonia"
+          ],
+          "reject": [
+            "Ammonium"
+          ]
+        }
+      ],
+      "answer": "Ammonia"
+    },
+    {
+      "level": 4,
+      "category": "Toys & Games",
+      "style": "typed",
+      "text": "This popular Lego theme in the 2000s featured buildable action figures with movable limbs, special masks, and intricate backstories",
+      "parts": [
+        {
+          "accept": [
+            "Bionicle",
+            "Bionicles",
+            "Lego Bionicle"
+          ]
+        }
+      ],
+      "answer": "Bionicle"
+    },
+    {
+      "level": 5,
+      "category": "TV",
+      "style": "typed",
+      "text": "This HBO series dealt with grief and loss after 2% of the world’s population suddenly vanishes without explanation",
+      "parts": [
+        {
+          "accept": [
+            "The Leftovers"
+          ]
+        }
+      ],
+      "answer": "The Leftovers"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "multi",
+      "text": "Identify each player’s sport",
+      "images": [
+        {
+          "src": "img/q/2026-11-02/sports-c1-p041-b-1.webp",
+          "alt": "A smiling fair-haired man in a white T-shirt sits beside a smiling woman in a black dress under a pergola"
+        },
+        {
+          "src": "img/q/2026-11-02/sports-c1-p041-b-2.webp",
+          "alt": "A smiling man with short light-brown hair and blue eyes in a navy top"
+        },
+        {
+          "src": "img/q/2026-11-02/sports-c1-p041-b-3.webp",
+          "alt": "A man with cornrows and a diamond earring in a black turtleneck and a sequined jacket"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Football",
+            "American Football",
+            "NFL"
+          ],
+          "reject": [
+            "Softball",
+            "Netball"
+          ]
+        },
+        {
+          "accept": [
+            "Soccer",
+            "Football",
+            "Association Football",
+            "Futbol",
+            "MLS"
+          ],
+          "reject": [
+            "Futsal",
+            "Softball",
+            "Netball"
+          ]
+        },
+        {
+          "accept": [
+            "Basketball",
+            "NBA"
+          ],
+          "reject": [
+            "Baseball",
+            "Softball",
+            "Netball",
+            "Racquetball"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Football, Soccer, Basketball"
+    },
+    {
+      "level": 7,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "This casual dine-in restaurant chain is known for their Shrimp Alfredo, Stuffed Ziti Fritta, and Chocolate Brownie Lasagna",
+      "parts": [
+        {
+          "accept": [
+            "Olive Garden"
+          ]
+        }
+      ],
+      "answer": "Olive Garden"
+    }
+  ]
+}

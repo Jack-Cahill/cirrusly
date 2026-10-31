@@ -1,0 +1,129 @@
+{
+  "label": "#13",
+  "date": "2026-10-31",
+  "prev_date": "2026-10-30",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This state’s 10 most populated cities include Glendale, Tempe, and Surprise",
+      "parts": [
+        {
+          "accept": [
+            "Arizona",
+            "AZ"
+          ]
+        }
+      ],
+      "answer": "Arizona"
+    },
+    {
+      "level": 2,
+      "category": "Language",
+      "style": "typed",
+      "text": "Identify this language:",
+      "images": [
+        {
+          "src": "img/q/2026-10-31/language-c1-p003-a-1.webp",
+          "alt": "A white street sign with two lines of black characters above an arrow pointing left"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Japanese",
+            "Kanji"
+          ]
+        }
+      ],
+      "answer": "Japanese"
+    },
+    {
+      "level": 3,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Kitchen prep spot: I _ _ _ _ D",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "ISLAND"
+          ],
+          "close": [
+            "SLAN"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "ISLAND"
+    },
+    {
+      "level": 4,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this comedy TV series based on its cast: Kristen Bell, Ted Danson, and William Jackson Harper",
+      "parts": [
+        {
+          "accept": [
+            "The Good Place"
+          ]
+        }
+      ],
+      "answer": "The Good Place"
+    },
+    {
+      "level": 5,
+      "category": "Retail & Fashion",
+      "style": "typed",
+      "text": "TJX owns T.J. Maxx, HomeGoods, and what other major American retailer?",
+      "parts": [
+        {
+          "accept": [
+            "Marshalls",
+            "Sierra",
+            "Homesense"
+          ]
+        }
+      ],
+      "answer": "Marshalls"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Beating out Will Zalatoris and Xander Schauffele, this Japanese man took home the Green Jacket at the 2021 Masters",
+      "parts": [
+        {
+          "accept": [
+            "Hideki Matsuyama",
+            "Matsuyama"
+          ],
+          "reject": [
+            "Hideki Matsui"
+          ],
+          "close": [
+            "Hideki"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Hideki Matsuyama"
+    },
+    {
+      "level": 7,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 2023 movie: Two fathers and their daughter are met by a group of strangers who inform them that they must sacrifice one member of their family to prevent the apocalypse",
+      "parts": [
+        {
+          "accept": [
+            "Knock at the Cabin"
+          ]
+        }
+      ],
+      "answer": "Knock at the Cabin"
+    }
+  ]
+}

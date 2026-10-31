@@ -1,0 +1,164 @@
+{
+  "label": "#12",
+  "date": "2026-10-30",
+  "prev_date": "2026-10-29",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "This fast-food restaurant is known for their Chicken Littles, Famous Bowls, and coleslaw",
+      "parts": [
+        {
+          "accept": [
+            "KFC",
+            "Kentucky Fried Chicken"
+          ]
+        }
+      ],
+      "answer": "KFC"
+    },
+    {
+      "level": 2,
+      "category": "Religion & Culture",
+      "style": "typed",
+      "text": "The son of Zeus and Leto, this Greek god is the god of archery, music and dance, truth, healing, and light",
+      "parts": [
+        {
+          "accept": [
+            "Apollo"
+          ]
+        }
+      ],
+      "answer": "Apollo"
+    },
+    {
+      "level": 3,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this comedy TV series based on its characters: Adam DeMamp, Blake Henderson, and Anders Holmvik",
+      "parts": [
+        {
+          "accept": [
+            "Workaholics"
+          ]
+        }
+      ],
+      "answer": "Workaholics"
+    },
+    {
+      "level": 4,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created this piece",
+      "images": [
+        {
+          "src": "img/q/2026-10-30/art-c1-p007-a-1.webp",
+          "alt": "A painting of a figure on a bridge clutching its face and screaming under a swirling orange sky"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Edvard Munch",
+            "Munch"
+          ],
+          "close": [
+            "Edvard"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Edvard Munch"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "order",
+      "text": "Rank these countries in order of landmass (largest to smallest)",
+      "items": [
+        {
+          "text": "Spain",
+          "rank": 3
+        },
+        {
+          "text": "Nigeria",
+          "rank": 1
+        },
+        {
+          "text": "Turkey",
+          "rank": 2
+        }
+      ],
+      "ends": [
+        "Largest",
+        "Smallest"
+      ],
+      "answer": "Nigeria, Turkey, Spain"
+    },
+    {
+      "level": 6,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 2022 movie starring Anya Taylor-Joy: Chef wreaks havoc on a group of elites dining at an exclusive island restaurant",
+      "parts": [
+        {
+          "accept": [
+            "The Menu"
+          ]
+        }
+      ],
+      "answer": "The Menu"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "multi",
+      "text": "Identify these two colleges based on their team’s logos",
+      "images": [
+        {
+          "src": "img/q/2026-10-30/sports-c2-p045-a-1.webp",
+          "alt": "A purple stylised wildcat head"
+        },
+        {
+          "src": "img/q/2026-10-30/sports-c2-p045-a-2.webp",
+          "alt": "An angry yellow and black cartoon yellow jacket with clenched fists"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Kansas State",
+            "K-State",
+            "Kansas St",
+            "Kansas State Wildcats",
+            "KSU",
+            "Kansas State University"
+          ],
+          "reject": [
+            "Kansas",
+            "Kansas City",
+            "Kent State",
+            "Kennesaw State"
+          ]
+        },
+        {
+          "accept": [
+            "Georgia Tech",
+            "Georgia Institute of Technology",
+            "GT",
+            "Georgia Tech Yellow Jackets",
+            "Yellow Jackets",
+            "GA Tech",
+            "Ramblin Wreck"
+          ],
+          "reject": [
+            "Georgia State"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Kansas State, Georgia Tech"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "label": "#14",
+  "date": "2026-11-01",
+  "prev_date": "2026-10-31",
+  "questions": [
+    {
+      "level": 1,
+      "category": "General Knowledge",
+      "style": "typed",
+      "text": "What does the acronym ‘ADHD’ stand for?",
+      "parts": [
+        {
+          "accept": [
+            "Attention Deficit Hyperactivity Disorder",
+            "Attention Deficit Hyperactive Disorder"
+          ]
+        }
+      ],
+      "answer": "Attention Deficit Hyperactivity Disorder"
+    },
+    {
+      "level": 2,
+      "category": "History",
+      "style": "typed",
+      "text": "What volcano erupted in 79 AD, killing thousands of Romans in Pompeii?",
+      "parts": [
+        {
+          "accept": [
+            "Mount Vesuvius",
+            "Vesuvius",
+            "Mt. Vesuvius"
+          ]
+        }
+      ],
+      "answer": "Mount Vesuvius"
+    },
+    {
+      "level": 3,
+      "category": "News & Celebs",
+      "style": "typed",
+      "text": "Prior to her relationship with Tristan Thompson, Khloé Kardashian was married to this NBA player",
+      "parts": [
+        {
+          "accept": [
+            "Lamar Odom",
+            "Odom"
+          ],
+          "close": [
+            "Lamar"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Lamar Odom"
+    },
+    {
+      "level": 4,
+      "category": "Technology",
+      "style": "typed",
+      "text": "Which iPhone was the only model to end in ‘C’, for its range of colors?",
+      "parts": [
+        {
+          "accept": [
+            "iPhone 5C",
+            "5C"
+          ],
+          "reject": [
+            "iPhone 5S",
+            "iPhone 5"
+          ]
+        }
+      ],
+      "answer": "iPhone 5C"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "The Great Sand Dunes National Park is found in what state?",
+      "parts": [
+        {
+          "accept": [
+            "Colorado",
+            "CO"
+          ]
+        }
+      ],
+      "answer": "Colorado"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Name these two grocery store products",
+      "images": [
+        {
+          "src": "img/q/2026-11-01/brands-c1-n010-a-x1.webp",
+          "alt": "A green can of ginger ale with a crown over a gold shield, its name blanked out"
+        },
+        {
+          "src": "img/q/2026-11-01/brands-c1-n010-a-x2.webp",
+          "alt": "A frozen lasagna box with the brand's oval blacked out"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Canada Dry"
+          ]
+        },
+        {
+          "accept": [
+            "Stouffer's"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Canada Dry & Stouffer's"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name the player",
+      "images": [
+        {
+          "src": "img/q/2026-11-01/sports-c1-p003-a-1.webp",
+          "alt": "A long-haired pitcher in a grey road uniform mid-delivery, glove raised high"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Tim Lincecum",
+            "Lincecum",
+            "Timothy Lincecum"
+          ]
+        }
+      ],
+      "answer": "Tim Lincecum"
+    }
+  ]
+}
