@@ -1,0 +1,131 @@
+{
+  "label": "#19",
+  "date": "2026-11-06",
+  "prev_date": "2026-11-05",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the Director based off their movies: Taxi Driver, Shutter Island, and The Departed",
+      "parts": [
+        {
+          "accept": [
+            "Martin Scorsese",
+            "Scorsese"
+          ]
+        }
+      ],
+      "answer": "Martin Scorsese"
+    },
+    {
+      "level": 2,
+      "category": "General Knowledge",
+      "style": "typed",
+      "text": "What does “ATM” stand for?",
+      "parts": [
+        {
+          "accept": [
+            "Automated Teller Machine",
+            "Automatic Teller Machine"
+          ]
+        }
+      ],
+      "answer": "Automated (Automatic) Teller Machine"
+    },
+    {
+      "level": 3,
+      "category": "Science",
+      "style": "multi",
+      "text": "Identify these three elements: Li, P, Au",
+      "parts": [
+        {
+          "label": "Li",
+          "accept": [
+            "Lithium"
+          ]
+        },
+        {
+          "label": "P",
+          "accept": [
+            "Phosphorus"
+          ]
+        },
+        {
+          "label": "Au",
+          "accept": [
+            "Gold"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Lithium, Phosphorus, Gold"
+    },
+    {
+      "level": 4,
+      "category": "Language",
+      "style": "typed",
+      "text": "In what country is the Tagalog language most spoken?",
+      "parts": [
+        {
+          "accept": [
+            "Philippines"
+          ]
+        }
+      ],
+      "answer": "Philippines"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This state’s 10 most populated cities include Fayetteville, Springdale, and Pine Bluff",
+      "parts": [
+        {
+          "accept": [
+            "Arkansas",
+            "AR"
+          ],
+          "reject": [
+            "Kansas"
+          ]
+        }
+      ],
+      "answer": "Arkansas"
+    },
+    {
+      "level": 6,
+      "category": "Technology",
+      "style": "typed",
+      "text": "In what decade did these technological advancements occur: Computer mouse invented, First commercial satellite launched, LEDs invented",
+      "parts": [
+        {
+          "accept": [
+            "1960s",
+            "60s",
+            "Sixties",
+            "The Sixties",
+            "Nineteen Sixties"
+          ]
+        }
+      ],
+      "answer": "1960s"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name the AFC team based on their 2025-26 players: Roquan Smith, Zay Flowers, and Kyle Van Noy",
+      "parts": [
+        {
+          "accept": [
+            "Baltimore Ravens",
+            "Ravens",
+            "Baltimore"
+          ]
+        }
+      ],
+      "answer": "Baltimore Ravens"
+    }
+  ]
+}

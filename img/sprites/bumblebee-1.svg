@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+<!-- BB1a: bee wings (forewing + hindwing with veins) swept back over the body -->
+<defs>
+  <clipPath id="bb1-ab"><ellipse cx="78" cy="82" rx="44" ry="32"/></clipPath>
+  <radialGradient id="bb1-shade" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#fff" stop-opacity="0.4"/><stop offset="0.5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#2a1a05" stop-opacity="0.35"/></radialGradient>
+  <linearGradient id="bb1-wing" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#cfe8ff" stop-opacity="0.45"/></linearGradient>
+<linearGradient id="bb1a-w2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#bfe0ff" stop-opacity="0.7"/></linearGradient><radialGradient id="bb1a-blur" cx="0.5" cy="1" r="1"><stop offset="0" stop-color="#fff" stop-opacity="0.95"/><stop offset="0.7" stop-color="#cfe6ff" stop-opacity="0.5"/><stop offset="1" stop-color="#b8dcff" stop-opacity="0"/></radialGradient></defs>
+<g transform="translate(-6,-8) rotate(-6 120 56)" opacity="0.8"><path d="M120,56 C102,38 70,30 46,38 C54,54 90,62 120,60 Z" fill="url(#bb1a-w2)" stroke="#7fa9d4" stroke-width="1.3"/><path d="M116,62 C100,58 82,58 68,62 C80,70 100,70 116,64 Z" fill="url(#bb1a-w2)" stroke="#7fa9d4" stroke-width="1.3"/></g>
+<path d="M112,98 Q108,112 100,120" stroke="#241a12" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M122,98 Q124,114 118,124" stroke="#241a12" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M96,106 Q86,122 74,128" stroke="#241a12" stroke-width="3" stroke-linecap="round" fill="none"/>
+<ellipse cx="78" cy="82" rx="44" ry="32" fill="#241a12"/>
+<g clip-path="url(#bb1-ab)">
+<rect x="0" y="0" width="200" height="150" fill="#241a12"/>
+<rect x="46" y="0" width="200" height="150" fill="#ffc93c"/>
+<rect x="70" y="0" width="200" height="150" fill="#241a12"/>
+<rect x="92" y="0" width="200" height="150" fill="#ffc93c"/>
+<ellipse cx="78" cy="82" rx="44" ry="32" fill="url(#bb1-shade)"/></g>
+<ellipse cx="78" cy="82" rx="44" ry="32" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="5" stroke-dasharray="0.5 4" stroke-linecap="round"/>
+<ellipse cx="124" cy="70" rx="24" ry="23" fill="#241a12"/><path d="M104,62 Q122,40 146,58 Q140,52 124,50 Q110,52 104,62 Z" fill="#ffc93c"/>
+<ellipse cx="124" cy="70" rx="24" ry="23" fill="none" stroke="#241a12" stroke-width="5" stroke-dasharray="0.5 4" stroke-linecap="round"/>
+<ellipse cx="120" cy="58" rx="9" ry="4" fill="#fff" opacity="0.3" transform="rotate(-20 120 58)"/>
+<circle cx="152" cy="78" r="16" fill="#2c2118"/><ellipse cx="158" cy="74" rx="6" ry="8" fill="#0d0a08"/><ellipse cx="156" cy="70" rx="2.2" ry="3" fill="#fff" opacity="0.8"/>
+<path d="M160,64 Q164,50 172,46 L180,44 M154,62 Q154,48 160,42 L166,38" stroke="#241a12" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+<g><path d="M120,56 C102,38 70,30 46,38 C54,54 90,62 120,60 Z" fill="url(#bb1a-w2)" stroke="#7fa9d4" stroke-width="1.3"/><path d="M118,58 C96,50 70,44 50,40 M104,52 C96,56 84,56 74,52 M92,46 Q86,52 78,54" stroke="#86a9cc" stroke-width="0.9" fill="none" opacity="0.75"/><path d="M116,62 C100,58 82,58 68,62 C80,70 100,70 116,64 Z" fill="url(#bb1a-w2)" stroke="#7fa9d4" stroke-width="1.3"/><path d="M114,64 C100,62 84,62 70,62" stroke="#86a9cc" stroke-width="0.9" fill="none" opacity="0.75"/></g>
+
+</svg>

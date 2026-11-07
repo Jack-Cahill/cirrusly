@@ -1,0 +1,163 @@
+{
+  "label": "#22",
+  "date": "2026-11-09",
+  "prev_date": "2026-11-08",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Science",
+      "style": "typed",
+      "text": "In addition to formulating the law of universal gravitation, this English scientist made major contributions to optics and calculus",
+      "parts": [
+        {
+          "accept": [
+            "Isaac Newton",
+            "Newton",
+            "Sir Isaac Newton"
+          ],
+          "close": [
+            "Isaac"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Isaac Newton"
+    },
+    {
+      "level": 2,
+      "category": "History",
+      "style": "typed",
+      "text": "Before serving as vice president to this man, Spiro Agnew fought in WW2 and served as Governor of Maryland",
+      "parts": [
+        {
+          "accept": [
+            "Richard Nixon",
+            "Nixon"
+          ]
+        }
+      ],
+      "answer": "Richard Nixon"
+    },
+    {
+      "level": 3,
+      "category": "TV",
+      "style": "typed",
+      "text": "In what major U.S. city did the TV show ‘Dexter’ take place?",
+      "parts": [
+        {
+          "accept": [
+            "Miami, Florida",
+            "Miami",
+            "Miami, FL"
+          ],
+          "close": [
+            "Florida"
+          ],
+          "hint": "Name the city"
+        }
+      ],
+      "answer": "Miami, Florida"
+    },
+    {
+      "level": 4,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name one of the two countries that start with ‘A’ but do not end with ‘A’",
+      "parts": [
+        {
+          "accept": [
+            "Afghanistan",
+            "Azerbaijan"
+          ]
+        }
+      ],
+      "answer": "Afghanistan / Azerbaijan"
+    },
+    {
+      "level": 5,
+      "category": "Sports",
+      "style": "multi",
+      "text": "The NHL Pacific Division includes the Flames, Kraken, Golden Knights, Ducks and Sharks. Name 2 of the other 3",
+      "parts": [
+        {
+          "accept": [
+            "Los Angeles Kings",
+            "LA Kings",
+            "Kings",
+            "Los Angeles",
+            "LA"
+          ]
+        },
+        {
+          "accept": [
+            "Vancouver Canucks",
+            "Canucks",
+            "Vancouver"
+          ]
+        },
+        {
+          "accept": [
+            "Edmonton Oilers",
+            "Oilers",
+            "Edmonton"
+          ]
+        }
+      ],
+      "order": "any",
+      "boxes": 2,
+      "answer": "Kings, Canucks, and Oilers"
+    },
+    {
+      "level": 6,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the actress based off their filmography: The Big Lebowski, Boogie Nights, and The Hunger Games: Mockingjay",
+      "parts": [
+        {
+          "accept": [
+            "Julianne Moore"
+          ],
+          "reject": [
+            "Julianne Hough"
+          ],
+          "close": [
+            "Moore"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Julianne Moore"
+    },
+    {
+      "level": 7,
+      "category": "News & Celebs",
+      "style": "multi",
+      "text": "Identify these two celebrities",
+      "images": [
+        {
+          "src": "img/q/2026-11-09/celebs-c1-p004-a-1.webp",
+          "alt": "A young man with tall curly hair, gold chains and a big diamond ring, his hand on his forehead"
+        },
+        {
+          "src": "img/q/2026-11-09/celebs-c1-p004-a-2.webp",
+          "alt": "A smiling woman with wavy blonde hair, in a red patterned top"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Desiigner"
+          ]
+        },
+        {
+          "accept": [
+            "Amy Poehler",
+            "Poehler"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Desiigner, Amy Poehler"
+    }
+  ]
+}

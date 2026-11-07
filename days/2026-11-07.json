@@ -1,0 +1,165 @@
+{
+  "label": "#20",
+  "date": "2026-11-07",
+  "prev_date": "2026-11-06",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "This author wrote The Old Man and the Sea, For Whom the Bell Tolls, and A Farewell to Arms",
+      "parts": [
+        {
+          "accept": [
+            "Ernest Hemingway",
+            "Hemingway"
+          ],
+          "close": [
+            "Ernest"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Ernest Hemingway"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "typed",
+      "text": "The Sea of Galilee is found in what country?",
+      "parts": [
+        {
+          "accept": [
+            "Israel"
+          ]
+        }
+      ],
+      "answer": "Israel"
+    },
+    {
+      "level": 3,
+      "category": "Sports",
+      "style": "multi",
+      "text": "Name 3 of the 4 tennis majors",
+      "parts": [
+        {
+          "accept": [
+            "U.S. Open",
+            "United States Open"
+          ]
+        },
+        {
+          "accept": [
+            "Wimbledon"
+          ]
+        },
+        {
+          "accept": [
+            "Australian Open",
+            "Aussie Open"
+          ],
+          "reject": [
+            "Austrian Open",
+            "Italian Open"
+          ]
+        },
+        {
+          "accept": [
+            "Roland Garros",
+            "French Open"
+          ]
+        }
+      ],
+      "order": "any",
+      "boxes": 3,
+      "answer": "U.S. Open, Wimbledon, Australian Open, and the Roland Garros (French Open)"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Like driftwood or a has-been: _ _ S _ E _ U _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "WASHEDUP",
+            "WASHED UP"
+          ],
+          "close": [
+            "WAHDP"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "WASHEDUP"
+    },
+    {
+      "level": 5,
+      "category": "TV",
+      "style": "typed",
+      "text": "What NBC TV series stars James Spader as Red Reddington - a former government agent turned high-profile criminal who helps the FBI catch other criminals?",
+      "parts": [
+        {
+          "accept": [
+            "The Blacklist"
+          ]
+        }
+      ],
+      "answer": "The Blacklist"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "What are the product names of these two grocery store items?",
+      "images": [
+        {
+          "src": "img/q/2026-11-07/brands-c1-n012-a-x1.webp",
+          "alt": "An orange box of sweetened puffed wheat cereal with a green frog in a cap saying GOOD!, its name blanked out"
+        },
+        {
+          "src": "img/q/2026-11-07/brands-c1-n012-a-x2.webp",
+          "alt": "A bottle of Xtra Hot cayenne pepper sauce, the maker's name on its label blanked out"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Honey Smacks",
+            "Smacks",
+            "Sugar Smacks"
+          ],
+          "close": [
+            "Kellogg's",
+            "Kellogg"
+          ],
+          "hint": "Name the product, not the maker"
+        },
+        {
+          "accept": [
+            "Frank’s RedHot",
+            "Frank's"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Honey Smacks & Frank’s RedHot"
+    },
+    {
+      "level": 7,
+      "category": "Toys & Games",
+      "style": "typed",
+      "text": "In this multiplayer survival game, players must use gathered or stolen materials to survive the wilderness, building bases or forming clans to protect against raids from other players",
+      "parts": [
+        {
+          "accept": [
+            "Rust"
+          ]
+        }
+      ],
+      "answer": "Rust"
+    }
+  ]
+}

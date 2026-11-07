@@ -1,0 +1,148 @@
+{
+  "label": "#21",
+  "date": "2026-11-08",
+  "prev_date": "2026-11-07",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "This fast-food restaurant is known for their Power Menu Bowl, Cinnamon Twists, and Baja Blast Freeze",
+      "parts": [
+        {
+          "accept": [
+            "Taco Bell"
+          ]
+        }
+      ],
+      "answer": "Taco Bell"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Sarah Niles, Juno Temple, and Hannah Waddingham received nominations for “supporting actress in a comedy series” for their roles in this Apple TV series",
+      "parts": [
+        {
+          "accept": [
+            "Ted Lasso"
+          ]
+        }
+      ],
+      "answer": "Ted Lasso"
+    },
+    {
+      "level": 3,
+      "category": "Retail & Fashion",
+      "style": "typed",
+      "text": "This sports apparel company made Steph Curry’s signature basketball shoes until the two split in 2025",
+      "parts": [
+        {
+          "accept": [
+            "Under Armour"
+          ]
+        }
+      ],
+      "answer": "Under Armour"
+    },
+    {
+      "level": 4,
+      "category": "Movies",
+      "style": "match",
+      "text": "Identify whether these movies are Dreamworks or Disney",
+      "groups": [
+        "DreamWorks",
+        "Disney"
+      ],
+      "items": [
+        {
+          "text": "The Emperor’s New Groove",
+          "group": 1
+        },
+        {
+          "text": "Treasure Planet",
+          "group": 1
+        },
+        {
+          "text": "The Croods",
+          "group": 0
+        },
+        {
+          "text": "How to Train Your Dragon",
+          "group": 0
+        }
+      ],
+      "answer": "Dreamworks (the Croods, How to Train Your Dragon), Disney (Emperor’s New Groove, Treasure Planet)"
+    },
+    {
+      "level": 5,
+      "category": "Puzzles",
+      "style": "typed",
+      "text": "Solve this riddle: What is cut on a table, but never eaten?",
+      "parts": [
+        {
+          "accept": [
+            "A deck of cards",
+            "Cards",
+            "Deck",
+            "Playing cards"
+          ]
+        }
+      ],
+      "answer": "A deck of cards"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Which German player won the Golden Boot at the 2010 men's World Cup?",
+      "parts": [
+        {
+          "accept": [
+            "Thomas Müller",
+            "Müller",
+            "Thomas Mueller",
+            "Mueller"
+          ],
+          "reject": [
+            "Gerd Müller",
+            "Gerd Mueller"
+          ]
+        }
+      ],
+      "answer": "Thomas Müller"
+    },
+    {
+      "level": 7,
+      "category": "Geography",
+      "style": "multi",
+      "text": "Identify these two state flags",
+      "images": [
+        {
+          "src": "img/q/2026-11-08/geography-c1-p034-a-1.webp",
+          "alt": "A yellow flag with a red sun symbol: a circle with four groups of rays"
+        },
+        {
+          "src": "img/q/2026-11-08/geography-c1-p034-a-2.webp",
+          "alt": "A blue flag edged in white and red, with a white bison carrying a round seal"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "New Mexico",
+            "NM"
+          ]
+        },
+        {
+          "accept": [
+            "Wyoming",
+            "WY"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "New Mexico & Wyoming"
+    }
+  ]
+}

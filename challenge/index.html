@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" class="loading play challenge">
+<head>
+  <meta charset="utf-8">
+  <!-- Every path below, and the shared scripts' own (sprites, examples), from the site's root. -->
+  <base href="../">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>cirrusly challenge</title>
+  <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Before the first paint: a reload into a game begun or finished (a save for today's day, an unfinished one for
+       yesterday's, or the sample's in this tab) keeps the scene hidden ("resuming", world.css) until game.js has put
+       it back, so the start screen never flashes up first. game.js drops it once the day is loaded (or fails); the
+       timeout is a backstop. Storage that throws just means no hiding. -->
+  <link rel="stylesheet" href="css/world.css">
+  <link rel="stylesheet" href="css/start.css">
+  <link rel="stylesheet" href="css/game.css">
+  <script src="js/steps.js" defer></script>
+  <script src="js/world.js" defer></script>
+  <script src="js/match.js" defer></script>
+  <script src="js/start.js" defer></script>
+  <script src="js/game-checks.js" defer></script>
+  <script src="js/game-text.js" defer></script>
+  <script src="js/game-dial.js" defer></script>
+  <script src="js/game-fit.js" defer></script>
+  <script src="js/game-answers.js" defer></script>
+  <script src="js/game-drag.js" defer></script>
+  <script src="js/game-match.js" defer></script>
+  <script src="js/game-order.js" defer></script>
+  <script src="js/game-reveal.js" defer></script>
+  <script src="js/game-fireworks.js" defer></script>
+  <script src="challenge/challenge.js" defer></script>
+  <link rel="stylesheet" href="challenge/challenge.css">
+</head>
+<body>
+  <!-- Fixed full-screen layers that world.js redraws from the camera; see the note at the top of world.js.
+       Elements with data-step="n" slide with step n's scenery. -->
+  <div class="stage">
+    <div class="sky"></div>
+    <img class="cirrus" data-step="1" src="img/start/cirrus.svg" alt="">
+    <!-- Step 8's backdrop: wisps of the title screen's cirrus at several sizes and strengths, behind the jets. -->
+    <div class="cirrus-high" data-step="8" aria-hidden="true">
+      <img class="wisp w1" src="img/sky/cirrus-wisp.svg" alt="">
+      <img class="wisp w2" src="img/sky/cirrus-wisp.svg" alt="">
+      <img class="wisp w3" src="img/sky/cirrus-wisp.svg" alt="">
+      <img class="wisp w4" src="img/sky/cirrus-wisp.svg" alt="">
+      <img class="wisp w5" src="img/sky/cirrus-wisp.svg" alt="">
+    </div>
+    <div class="ground">
+      <div class="dirt"></div>
+      <div class="grass"></div>
+      <button class="how-stone" type="button" aria-controls="how-card" aria-expanded="false">How to play</button>
+    </div>
+    <div class="sprites"></div>
+    <!-- 7 for 7: fireworks over the sky, under the question box (game-fireworks.js). -->
+    <canvas class="fireworks" aria-hidden="true" hidden></canvas>
+
+    <!-- Step 1's start screen, How to play card and question box; start.js drives them. -->
+    <div class="start" data-step="1">
+      <div class="start-ui">
+        <img class="deco-bee" src="img/sprites/bumblebee-1.svg" alt="">
+        <img class="deco-kite" src="img/sprites/kite-1.svg" alt="">
+        <div class="title-wrap">
+          <h1 class="title">CIRRUSLY</h1>
+          <p class="beta" hidden>BETA</p>
+        </div>
+        <p class="tagline">The challenge</p>
+        <p class="rules-line"><span>Get 10 right&nbsp;·</span> <span>3 lives</span></p>
+        <button class="liftoff" type="button">LIFTOFF</button>
+        <form class="unlock" hidden>
+          <input class="unlock-pass" type="password" autocomplete="current-password" aria-label="Passphrase"
+                 placeholder="Passphrase">
+          <button class="go unlock-go" type="submit">Open</button>
+          <p class="unlock-note" role="status"></p>
+        </form>
+        <!-- In LIFTOFF's place on a date with no game (game.js): when the next one is. -->
+        <p class="no-game" role="status" hidden></p>
+      </div>
+
+      <div class="sky-slot">
+        <section class="how-card" id="how-card" role="dialog" aria-labelledby="how-title" hidden>
+          <div class="bunch-anchor" data-side="left"></div>
+          <div class="bunch-anchor" data-side="right"></div>
+          <div class="how-body">
+            <button class="how-close" type="button" aria-label="Close How to play">✕</button>
+            <h2 id="how-title">How to play</h2>
+            <ol>
+              <li>Get <b>10 right</b> before you run out of <b>3 lives</b></li>
+              <li>A right answer climbs a level<span class="sr-only">.</span>
+                <span class="how-sub">The next question is harder</span></li>
+              <li>A wrong answer drops a level<span class="sr-only">.</span>
+                <span class="how-sub">An easier question, and a balloon pops</span></li>
+              <li>You get <b>40 seconds</b> a question<span class="sr-only">.</span>
+                <span class="how-sub">Every category, picked at random</span></li>
+            </ol>
+            <p class="how-credits"><a href="credits.html">Photo credits</a> · <a href="privacy.html">Privacy</a></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="sky-slot q-slot">
+        <!-- The timer floats beside the box (above it on narrow screens); the group floats up together. -->
+        <div class="qgroup" hidden>
+          <div class="timer">
+            <!-- Classic airspeed dial, 0-40 s over 270 degrees: the needle is rotate(-225 + 270 * seconds / 40) about
+                 the centre (80, 80), resting at 40. game.js redraws the arcs, the needle and the number window. -->
+            <svg class="dial" viewBox="0 0 160 160" role="img" aria-label="Timer: 40 seconds">
+              <defs>
+                <radialGradient id="dial-bezel" cx="0.35" cy="0.3" r="0.8">
+                  <stop offset="0" stop-color="#9aa3b5"/><stop offset="1" stop-color="#3a4052"/>
+                </radialGradient>
+                <radialGradient id="dial-face" cx="0.4" cy="0.35" r="0.8">
+                  <stop offset="0" stop-color="#252b38"/><stop offset="1" stop-color="#0d1017"/>
+                </radialGradient>
+              </defs>
+              <circle cx="80" cy="80" r="76" fill="url(#dial-bezel)"/>
+              <!-- Game only (game.js): the outer ring beats red at 5 s and under, and the extra time for extra answer
+                   boxes is a blue arc on it, ending at 40, that drains before the needle moves. -->
+              <circle class="dial-ring" cx="80" cy="80" r="71" fill="none" stroke-width="10"/>
+              <path class="dial-extra" d="" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <circle cx="80" cy="80" r="66" fill="url(#dial-face)"/>
+              <!-- The seconds left as a thick arc from 0, over a faint full-length track: green above 20 s, amber
+                   from 20 s down to just above 10 s, red at 10 s and under (colours in game.css). -->
+              <path d="M37.57,122.43 A60,60 0 1,1 122.43,122.43" stroke="#fff" stroke-opacity="0.08" stroke-width="9"
+                    stroke-linecap="round" fill="none"/>
+              <path class="dial-arc" d="M37.57,122.43 A60,60 0 1,1 122.43,122.43" stroke-width="9"
+                    stroke-linecap="round" fill="none"/>
+              <g stroke="#f4f1e6" stroke-linecap="round">
+                <path stroke-width="2.4" d="M43.9 116.1L37.6 122.4 M30.0 89.9L21.2 91.7 M32.9 60.5L24.6 57.0
+                  M51.7 37.6L46.7 30.1 M80.0 29.0L80.0 20.0 M108.3 37.6L113.3 30.1
+                  M127.1 60.5L135.4 57.0 M130.0 89.9L138.8 91.7 M116.1 116.1L122.4 122.4"/>
+                <path stroke-width="1.2" d="M36.0 114.7L32.9 117.1 M32.3 109.3L28.8 111.3 M29.1 103.4L25.5 105.1
+                  M26.7 97.3L22.9 98.5 M24.2 84.4L20.2 84.7 M24.0 77.8L20.0 77.6
+                  M24.7 71.2L20.7 70.6 M26.1 64.8L22.3 63.7 M31.1 52.6L27.7 50.7
+                  M34.7 47.1L31.5 44.7 M38.9 42.0L35.9 39.3 M43.6 37.4L41.0 34.4
+                  M54.6 30.1L52.8 26.5 M60.6 27.5L59.2 23.7 M66.9 25.5L66.0 21.7
+                  M73.4 24.4L72.9 20.4 M86.6 24.4L87.1 20.4 M93.1 25.5L94.0 21.7
+                  M99.4 27.5L100.8 23.7 M105.4 30.1L107.2 26.5 M116.4 37.4L119.0 34.4
+                  M121.1 42.0L124.1 39.3 M125.3 47.1L128.5 44.7 M128.9 52.6L132.3 50.7
+                  M133.9 64.8L137.7 63.7 M135.3 71.2L139.3 70.6 M136.0 77.8L140.0 77.6
+                  M135.8 84.4L139.8 84.7 M133.3 97.3L137.1 98.5 M130.9 103.4L134.5 105.1
+                  M127.7 109.3L131.2 111.3 M124.0 114.7L127.1 117.1"/>
+              </g>
+              <g fill="#f4f1e6" font-family="Nunito, sans-serif" font-weight="800" font-size="12" text-anchor="middle">
+                <text x="52.4" y="112.1">0</text><text x="44.0" y="69.6">10</text><text x="80.0" y="45.5">20</text>
+                <text x="116.0" y="69.6">30</text><text x="107.6" y="112.1">40</text>
+              </g>
+              <g class="dial-needle" transform="rotate(45 80 80)">
+                <line x1="80" y1="80" x2="126" y2="80" stroke="#ff6a3d" stroke-width="3.2" stroke-linecap="round"/>
+              </g>
+              <circle cx="80" cy="80" r="7" fill="#c9ced9"/><circle cx="80" cy="80" r="3" fill="#3a4052"/>
+              <!-- The whole seconds left, in a dark window under the hub (number colours in game.css). -->
+              <g class="dial-window">
+                <rect x="62" y="103" width="36" height="27" rx="6" fill="#05070b" stroke="#3a4052" stroke-width="1.5"/>
+                <text class="dial-num" x="80" y="124" text-anchor="middle" font-family="Fredoka, Nunito, sans-serif"
+                      font-weight="700" font-size="21">40</text>
+              </g>
+              <ellipse cx="60" cy="42" rx="26" ry="10" fill="#fff" opacity="0.08" transform="rotate(-25 60 42)"/>
+            </svg>
+          </div>
+          <form class="qbox" aria-label="Question 1 of 7" autocomplete="off">
+            <div class="bunch-anchor" data-side="left"></div>
+            <div class="bunch-anchor" data-side="right"></div>
+            <p class="qnum">Question <span class="qnum-value">1</span> of 7</p>
+            <p class="qgoal" hidden><span class="qgoal-long">Every right answer climbs</span><span
+               class="qgoal-short">Right answers climb</span></p>
+            <div class="qpic" hidden></div>
+            <p class="qtext">
+              Question question question question question question question question question question?
+            </p>
+
+            <!-- game.js shows these: the answer boxes, the "Close!" line, the reveal, the example card shown before
+                 a tricky style, the end screen and its review of the day's questions. -->
+            <div class="qplay" hidden></div>
+            <p class="qfeedback" role="status" aria-live="polite" hidden></p>
+            <div class="qreveal" hidden>
+              <p class="qverdict" role="status" aria-live="polite"></p>
+              <p class="qright"><span class="sr-only">Answer: </span><b class="qright-text"></b></p>
+              <div class="qpic qreveal-pics"></div>
+              <button class="go qnext" type="button">Next</button>
+            </div>
+            <!-- The example card: what's next and how it works, then a solved one in a light frame. "Q:" and "A:"
+                 are read out as "Question:" and "Answer:". -->
+            <div class="qexample" hidden>
+              <p class="qexample-next">Next up</p>
+              <p class="qexample-title"></p>
+              <p class="qexample-rule"></p>
+              <div class="qexample-box" role="group" aria-label="Example">
+                <p class="qexample-tag" aria-hidden="true">Example</p>
+                <div class="qpic qexample-pics"></div>
+                <p class="qtext qexample-text"></p>
+                <p class="qright"><span class="qexample-label" aria-hidden="true">A: </span><span
+                   class="sr-only">Answer: </span><b class="qexample-answer"></b></p>
+                <p class="qexample-explain"></p>
+              </div>
+              <button class="go qgotit" type="button">Start question 1</button>
+            </div>
+            <div class="qend" hidden>
+              <h2 class="qend-title">You reached <span class="qend-height">0 m</span></h2>
+              <p class="qend-score">0 of 7 right</p>
+              <p class="qend-row"></p>
+              <div class="qend-share">
+                <button class="go qend-copy" type="button">Play again</button>
+                <button class="go qend-review" type="button">Review your run</button>
+                <span class="qend-copied" role="status" aria-live="polite"></span>
+              </div>
+              <textarea class="qend-text" readonly rows="3" aria-label="Your result to share" hidden></textarea>
+              <dl class="qend-stats">
+                <div><dt>Runs</dt><dd class="stat-played">0</dd></div>
+                <div><dt>Wins</dt><dd class="stat-streak">0</dd></div>
+                <div><dt>Best</dt><dd class="stat-best">0 m</dd></div>
+                <div><dt>Fastest win</dt><dd class="stat-average">0 of 7</dd></div>
+              </dl>
+            </div>
+            <!-- In the end screen's place: a row per question (game.js), with how many players got each right. -->
+            <div class="qreview" hidden>
+              <ol class="qreview-list qscroll"></ol>
+              <button class="go qreview-back" type="button">Back</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <canvas class="ruler" aria-hidden="true"></canvas>
+    <div class="readout" aria-hidden="true"><span class="readout-value">0 m</span></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "rebus": {
+    "title": "Rebus",
+    "rule": "The picture spells out a phrase",
+    "images": [
+      {
+        "src": "img/examples/rebus-reading-between-the-lines.png",
+        "alt": "READING written between two lines"
+      }
+    ],
+    "answer": "Reading Between the Lines",
+    "explain": "READING sits between the lines"
+  },
+  "rebus-letters": {
+    "title": "Rebus",
+    "rule": "The letters spell out a phrase",
+    "text": "MIL1LION",
+    "answer": "One in a Million"
+  },
+  "rhyming": {
+    "title": "Rhyming mashup",
+    "rule": "Answer in two words that rhyme",
+    "text": "Large Hog",
+    "answer": "Big Pig",
+    "explain": "Large → Big · Hog → Pig"
+  },
+  "name": {
+    "title": "Name mashup",
+    "rule": "Two famous names that share a word",
+    "text": "‘Careless Whisper’ singer who won six NBA titles in the 1990s",
+    "answer": "George Michael Jordan",
+    "explain": "George Michael + Michael Jordan"
+  },
+  "soundalike-countries": {
+    "title": "Sounds like a country",
+    "rule": "Solve each clue, say them out loud",
+    "text": "Dried Grass for Horses + Drink Brewed from Leaves",
+    "answer": "Haiti",
+    "explain": "Hay + Tea"
+  },
+  "soundalike-cities": {
+    "title": "Sounds like a city",
+    "rule": "Solve each clue, say them out loud",
+    "text": "Wizard’s Land + Not High",
+    "answer": "Oslo",
+    "explain": "Oz + Low"
+  },
+  "crossword": {
+    "title": "Crossword",
+    "rule": "Fill in the blanks - type the whole answer",
+    "text": "Dessert with candles on top: B _ R T H _ A _ C A _ E",
+    "answer": "BIRTHDAYCAKE"
+  }
+}
