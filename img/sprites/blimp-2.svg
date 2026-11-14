@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+<!-- BL2: bright yellow with blue stripes -->
+<defs>
+  <linearGradient id="bl2-env" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe47a"/><stop offset="1" stop-color="#f0a91e"/></linearGradient>
+  <linearGradient id="bl2-fin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4b86e8"/><stop offset="1" stop-color="#1f4ea8"/></linearGradient>
+  <linearGradient id="bl2-gon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset="1" stop-color="#a9b3c5"/></linearGradient>
+  <radialGradient id="bl2-shine" cx="0.4" cy="0.2" r="0.7"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <clipPath id="bl2-clip"><path d="M272,64 C272,34 232,20 170,20 C100,20 52,34 30,58 Q26,64 30,70 C52,94 100,108 170,108 C232,108 272,94 272,64 Z"/></clipPath>
+</defs>
+<path d="M64,36 L40,6 L72,6 L100,28 Z" fill="url(#bl2-fin)"/>
+<path d="M272,64 C272,34 232,20 170,20 C100,20 52,34 30,58 Q26,64 30,70 C52,94 100,108 170,108 C232,108 272,94 272,64 Z" fill="url(#bl2-env)"/>
+<g clip-path="url(#bl2-clip)">
+<rect x="0" y="46" width="300" height="8" fill="#2f66cc" opacity="1"/>
+<rect x="0" y="60" width="300" height="4" fill="#2f66cc" opacity="1"/>
+<rect x="0" y="88" width="300" height="20" fill="#2f66cc" opacity="0.9"/>
+<ellipse cx="160" cy="36" rx="110" ry="22" fill="url(#bl2-shine)"/>
+</g>
+<path d="M271,58.0 Q262,37.0 252,34.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,61.0 Q262,50.5 252,49.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,64.0 Q262,64.0 252,64.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,67.0 Q262,77.5 252,79.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<path d="M271,70.0 Q262,91.0 252,94.0" stroke="#000" stroke-opacity="0.12" stroke-width="1.3" fill="none"/>
+<circle cx="270" cy="64" r="3" fill="#1f4ea8"/>
+<path d="M64,92 L40,122 L72,122 L100,100 Z" fill="url(#bl2-fin)"/>
+<path d="M58,66 L18,80 L40,86 L96,74 Z" fill="url(#bl2-fin)"/>
+<path d="M150,104 L204,104 Q212,106 210,114 Q206,122 196,122 L158,122 Q148,120 150,104 Z" fill="url(#bl2-gon)"/>
+<rect x="160" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="170" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="180" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="190" y="108" width="6" height="6" rx="2" fill="#3a5580"/><rect x="200" y="108" width="6" height="6" rx="2" fill="#3a5580"/>
+<rect x="130" y="110" width="22" height="9" rx="4.5" fill="url(#bl2-gon)"/><path d="M146,114 L152,114" stroke="#8a93a8" stroke-width="3"/>
+<ellipse cx="128" cy="114.5" rx="2.5" ry="12" fill="#dfe5ee" opacity="0.55"/><circle cx="128" cy="114.5" r="2" fill="#6b7390"/>
+</svg>

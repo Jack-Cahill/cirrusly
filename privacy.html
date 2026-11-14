@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · cirrusly</title>
+  <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+  <!-- Fonts and colours as on the start screen (start.css), kept here so this page loads nothing else. -->
+  <style>
+    @font-face {
+      font-family: "Fredoka";
+      font-style: normal;
+      font-weight: 600 700;
+      font-display: swap;
+      src: url("fonts/fredoka-latin.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 600 800;
+      font-display: swap;
+      src: url("fonts/nunito-latin.woff2") format("woff2");
+    }
+
+    :root {
+      --ink: #1f2a4d;
+      --ink-soft: #3c5378;
+      --glass-card: rgb(255 255 255 / 55%);
+      --glass-rim: rgb(255 255 255 / 85%);
+      --focus: #2f7fd1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px 16px;
+      background: linear-gradient(#bfe3f7, #dff1fb);
+      color: var(--ink);
+      font-family: "Nunito", system-ui, sans-serif;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 20px 24px 24px;
+      background: var(--glass-card);
+      border: 2px solid var(--glass-rim);
+      border-radius: 16px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-family: "Fredoka", "Trebuchet MS", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    a {
+      color: var(--ink-soft);
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy</h1>
+    <p>Cirrusly counts how many people play each day and each finished game’s results (which questions were right,
+      nothing personal) to show how everyone did. Your scores and stats stay in your browser.</p>
+    <p><a href="index.html">Back to cirrusly</a></p>
+  </main>
+</body>
+</html>

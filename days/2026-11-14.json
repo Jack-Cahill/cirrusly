@@ -1,0 +1,138 @@
+{
+  "label": "#27",
+  "date": "2026-11-14",
+  "prev_date": "2026-11-13",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the actor based off their filmography: Blade Runner, Star Wars, and Air Force One",
+      "parts": [
+        {
+          "accept": [
+            "Harrison Ford",
+            "Ford"
+          ],
+          "close": [
+            "Harrison"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Harrison Ford"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This country’s sole neighbors are Panama & Nicaragua",
+      "parts": [
+        {
+          "accept": [
+            "Costa Rica"
+          ]
+        }
+      ],
+      "answer": "Costa Rica"
+    },
+    {
+      "level": 3,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created these pieces",
+      "images": [
+        {
+          "src": "img/q/2026-11-14/art-c1-p002-a-1.webp",
+          "alt": "Three paintings: a white cow skull over blue and red, close-up red and orange petals, and swirling green shapes"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Georgia O’Keeffe",
+            "O’Keeffe"
+          ],
+          "close": [
+            "Georgia"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Georgia O’Keeffe"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "How robbers can get caught: _ _ D H _ _ D E _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "REDHANDED",
+            "RED-HANDED"
+          ],
+          "close": [
+            "REAND"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "REDHANDED"
+    },
+    {
+      "level": 5,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this Nickelodeon series",
+      "images": [
+        {
+          "src": "img/q/2026-11-14/tv-c1-p036-a-1.webp",
+          "alt": "A grinning blue hand-drawn superhero rides a scooter with a cartoon boy and a girl in glasses, on a scribbled hillside"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "ChalkZone"
+          ]
+        }
+      ],
+      "answer": "ChalkZone"
+    },
+    {
+      "level": 6,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "This casual dine-in restaurant chain is known for their Avocado Eggrolls, Bang-Bang Chicken and Shrimp, and fried mac and cheese balls",
+      "parts": [
+        {
+          "accept": [
+            "The Cheesecake Factory"
+          ]
+        }
+      ],
+      "answer": "The Cheesecake Factory"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "The San Antonio Spurs defeated what team in the 2026 Western Conference finals?",
+      "parts": [
+        {
+          "accept": [
+            "Oklahoma City Thunder",
+            "Thunder",
+            "OKC Thunder",
+            "Oklahoma City",
+            "OKC"
+          ]
+        }
+      ],
+      "answer": "Oklahoma City Thunder"
+    }
+  ]
+}

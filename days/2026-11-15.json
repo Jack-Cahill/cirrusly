@@ -1,0 +1,128 @@
+{
+  "label": "#28",
+  "date": "2026-11-15",
+  "prev_date": "2026-11-14",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Science",
+      "style": "typed",
+      "text": "Europa, Io, and Ganymede are moons of what planet?",
+      "parts": [
+        {
+          "accept": [
+            "Jupiter"
+          ]
+        }
+      ],
+      "answer": "Jupiter"
+    },
+    {
+      "level": 2,
+      "category": "General Knowledge",
+      "style": "typed",
+      "text": "What is the name of this exercise?",
+      "images": [
+        {
+          "src": "img/q/2026-11-15/general-c2-p009-a-1.webp",
+          "alt": "A woman shown in five steps: standing, crouching, in a plank, crouching again, then jumping with arms up"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Burpees",
+            "Squat Thrusts"
+          ]
+        }
+      ],
+      "answer": "Burpees (Squat thrusts)"
+    },
+    {
+      "level": 3,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Acadia National Park is found in what state?",
+      "parts": [
+        {
+          "accept": [
+            "Maine",
+            "ME"
+          ]
+        }
+      ],
+      "answer": "Maine"
+    },
+    {
+      "level": 4,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the Director based off these movies: Hot Fuzz, Shaun of the Dead, and Baby Driver",
+      "parts": [
+        {
+          "accept": [
+            "Edgar Wright"
+          ],
+          "close": [
+            "Wright"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Edgar Wright"
+    },
+    {
+      "level": 5,
+      "category": "Mashup",
+      "style": "typed",
+      "text": "Name Mashup: ‘6 Foot 7 Foot’ singer known as “The Great One” who held the NHL career goals record for decades",
+      "example": "name",
+      "parts": [
+        {
+          "accept": [
+            "Lil Wayne Gretzky",
+            "Lil Wayne Wayne Gretzky"
+          ],
+          "close": [
+            "Lil Wayne",
+            "Wayne Gretzky"
+          ],
+          "hint": "Mash both names together"
+        }
+      ],
+      "answer": "Lil Wayne Gretzky"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Between officials and players, how many people are on the field during a given NFL play?",
+      "parts": [
+        {
+          "accept": [
+            "29"
+          ]
+        }
+      ],
+      "answer": "29"
+    },
+    {
+      "level": 7,
+      "category": "TV",
+      "style": "typed",
+      "text": "This TV sitcom airing from 1964 to 1967 included side characters such as Lovey Howell, Ginger Grant, Professor Roy Hinkley, and Mary Ann Summers",
+      "parts": [
+        {
+          "accept": [
+            "Gilligan’s Island"
+          ],
+          "close": [
+            "Gilligan’s",
+            "Gilligan"
+          ]
+        }
+      ],
+      "answer": "Gilligan’s Island"
+    }
+  ]
+}

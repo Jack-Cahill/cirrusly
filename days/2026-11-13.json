@@ -1,0 +1,183 @@
+{
+  "label": "#26",
+  "date": "2026-11-13",
+  "prev_date": "2026-11-12",
+  "questions": [
+    {
+      "level": 1,
+      "category": "News & Celebs",
+      "style": "multi",
+      "text": "The celebrity couple name “Bennifer” is a combination of which two celebrities?",
+      "parts": [
+        {
+          "accept": [
+            "Ben Affleck",
+            "Affleck"
+          ],
+          "reject": [
+            "Casey Affleck"
+          ]
+        },
+        {
+          "accept": [
+            "Jennifer Lopez",
+            "Lopez",
+            "J.Lo"
+          ]
+        }
+      ],
+      "order": "any",
+      "answer": "Ben Affleck and Jennifer Lopez (J.Lo)"
+    },
+    {
+      "level": 2,
+      "category": "TV",
+      "style": "typed",
+      "text": "Who Wants to Be a Millionaire originally had three “lifelines”, including Phone-a-Friend. Name one of the other two.",
+      "parts": [
+        {
+          "accept": [
+            "50/50",
+            "Ask the Audience"
+          ]
+        }
+      ],
+      "answer": "50/50 or Ask the Audience"
+    },
+    {
+      "level": 3,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Between Sydney and Beijing, who hosted the 2004 Summer Olympics?",
+      "parts": [
+        {
+          "accept": [
+            "Athens",
+            "Athens Greece"
+          ]
+        }
+      ],
+      "answer": "Athens"
+    },
+    {
+      "level": 4,
+      "category": "History",
+      "style": "order",
+      "text": "Rank the order of U.S. presidents from earliest to latest rule",
+      "items": [
+        {
+          "text": "Gerald Ford",
+          "rank": 3
+        },
+        {
+          "text": "Harry Truman",
+          "rank": 1
+        },
+        {
+          "text": "John F. Kennedy",
+          "rank": 2
+        }
+      ],
+      "ends": [
+        "Earliest",
+        "Latest"
+      ],
+      "answer": "Truman, JFK, Ford"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name the global city based on these images",
+      "images": [
+        {
+          "src": "img/q/2026-11-13/geography-c3-p010-b-1.webp",
+          "alt": "A night skyline with three towers joined by a ship-shaped roof, two spiky domes and a lit bay"
+        },
+        {
+          "src": "img/q/2026-11-13/geography-c3-p010-b-2.webp",
+          "alt": "Tall tree-shaped steel structures covered in plants, joined by a walkway, beside a hotel tower"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Singapore"
+          ],
+          "close": [
+            "Marina Bay Sands",
+            "Marina Bay",
+            "Gardens by the Bay"
+          ],
+          "hint": "Name the city"
+        }
+      ],
+      "answer": "Singapore"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Identify these two logos",
+      "images": [
+        {
+          "src": "img/q/2026-11-13/brands-c2-n004-a-x1.webp",
+          "alt": "A blue cursive letter G with a red heart above it"
+        },
+        {
+          "src": "img/q/2026-11-13/brands-c2-n004-a-x2.webp",
+          "alt": "A black rectangle with two white half-ovals back to back, a black letter D below"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "General Mills"
+          ],
+          "reject": [
+            "General Motors"
+          ]
+        },
+        {
+          "accept": [
+            "Dolby",
+            "Dolby Vision",
+            "Dolby Digital",
+            "Dolby Atmos",
+            "Dolby Laboratories",
+            "Dolby Labs"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "General Mills & Dolby",
+      "reveal": [
+        {
+          "src": "img/q/2026-11-13/brands-c2-n004-a-x3.webp",
+          "alt": "The Dolby Vision logo"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "category": "Puzzles",
+      "style": "typed",
+      "text": "Solve this rebus puzzle",
+      "example": "rebus",
+      "images": [
+        {
+          "src": "img/q/2026-11-13/puzzles-c1-p006-a-1.webp",
+          "alt": "The letters NIS written ten times, in five rows of two"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Tennis"
+          ]
+        }
+      ],
+      "answer": "Tennis"
+    }
+  ]
+}

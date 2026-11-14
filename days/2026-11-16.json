@@ -1,0 +1,117 @@
+{
+  "label": "#29",
+  "date": "2026-11-16",
+  "prev_date": "2026-11-15",
+  "questions": [
+    {
+      "level": 1,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this History Channel TV series: Ragnar Lothbrok and his family navigate the politics and violence of the Norse world",
+      "parts": [
+        {
+          "accept": [
+            "Vikings"
+          ]
+        }
+      ],
+      "answer": "Vikings"
+    },
+    {
+      "level": 2,
+      "category": "History",
+      "style": "typed",
+      "text": "Issued in 1215, this was the first document to put into writing that the king was not above the law, laying a foundation for constitutional law",
+      "parts": [
+        {
+          "accept": [
+            "Magna Carta",
+            "Great Charter"
+          ]
+        }
+      ],
+      "answer": "Magna Carta"
+    },
+    {
+      "level": 3,
+      "category": "Retail & Fashion",
+      "style": "typed",
+      "text": "Founded in 1967, this retailer is known for having its employees dress in Hawaiian shirts",
+      "parts": [
+        {
+          "accept": [
+            "Trader Joe’s"
+          ],
+          "reject": [
+            "Trader Vic's"
+          ]
+        }
+      ],
+      "answer": "Trader Joe’s"
+    },
+    {
+      "level": 4,
+      "category": "Toys & Games",
+      "style": "typed",
+      "text": "This toy, popular in the 1990s, consisted of a plastic ankle loop attached to a weighted ball and had kids try to jump the ball as it spun around",
+      "parts": [
+        {
+          "accept": [
+            "Skip-It"
+          ],
+          "reject": [
+            "Skip-Bo"
+          ]
+        }
+      ],
+      "answer": "Skip-It"
+    },
+    {
+      "level": 5,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name the NL Baseball team based on their 2026 players: Trea Turner, J.T. Realmuto, and Alec Bohm",
+      "parts": [
+        {
+          "accept": [
+            "Philadelphia Phillies",
+            "Phillies",
+            "Phils",
+            "Philadelphia",
+            "Philly"
+          ]
+        }
+      ],
+      "answer": "(Philadelphia) Phillies"
+    },
+    {
+      "level": 6,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 2003 movie: An aging actor (Bill Murray) and a young woman (Scarlett Johansson) form an unlikely bond as they navigate Tokyo",
+      "parts": [
+        {
+          "accept": [
+            "Lost in Translation"
+          ]
+        }
+      ],
+      "answer": "Lost in Translation"
+    },
+    {
+      "level": 7,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name the most populated city in Europe (excluding Russia and Bulgaria) that begins with the letter ‘S’",
+      "parts": [
+        {
+          "accept": [
+            "Stockholm",
+            "Stockholm, Sweden"
+          ]
+        }
+      ],
+      "answer": "Stockholm (Sweden)"
+    }
+  ]
+}
