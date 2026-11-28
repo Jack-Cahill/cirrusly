@@ -1,0 +1,170 @@
+{
+  "label": "#43",
+  "date": "2026-11-30",
+  "prev_date": "2026-11-29",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Art & Lit",
+      "style": "typed",
+      "text": "Identify the artist who created this piece",
+      "images": [
+        {
+          "src": "img/q/2026-11-30/art-c2-p015-a-1.webp",
+          "alt": "An ink sketch of a nude man with arms and legs spread in two poses inside a circle and a square, with notes"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Leonardo da Vinci",
+            "da Vinci"
+          ],
+          "close": [
+            "Leonardo"
+          ],
+          "hint": "Give the full name"
+        }
+      ],
+      "answer": "Leonardo da Vinci"
+    },
+    {
+      "level": 2,
+      "category": "History",
+      "style": "typed",
+      "text": "Named after a Senator, this practice, often regarding communism, included making accusations of subversion or treason without proper regard for evidence",
+      "parts": [
+        {
+          "accept": [
+            "McCarthyism"
+          ],
+          "close": [
+            "McCarthy",
+            "Joseph McCarthy",
+            "Joe McCarthy",
+            "Senator McCarthy"
+          ],
+          "hint": "Name the practice, not the man"
+        }
+      ],
+      "answer": "McCarthyism"
+    },
+    {
+      "level": 3,
+      "category": "News & Celebs",
+      "style": "typed",
+      "text": "When running for president, which man did Hillary Clinton choose as her running mate?",
+      "parts": [
+        {
+          "accept": [
+            "Tim Kaine",
+            "Kaine"
+          ]
+        }
+      ],
+      "answer": "Tim Kaine"
+    },
+    {
+      "level": 4,
+      "category": "Toys & Games",
+      "style": "typed",
+      "text": "In this railway-themed board game, each turn allows you to either draw more cards, claim a route, or acquire additional destination cards",
+      "parts": [
+        {
+          "accept": [
+            "Ticket to Ride"
+          ]
+        }
+      ],
+      "answer": "Ticket to Ride"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "multi",
+      "text": "Identify these two flags",
+      "images": [
+        {
+          "src": "img/q/2026-11-30/geography-c1-p033-a-1.webp",
+          "alt": "A flag of three vertical stripes: black, yellow and red"
+        },
+        {
+          "src": "img/q/2026-11-30/geography-c1-p033-a-2.webp",
+          "alt": "A green flag with a red circle set left of centre"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Belgium"
+          ]
+        },
+        {
+          "accept": [
+            "Bangladesh"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Belgium & Bangladesh"
+    },
+    {
+      "level": 6,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "Identify these two grocery store brands",
+      "images": [
+        {
+          "src": "img/q/2026-11-30/brands-c2-n008-a-x1.webp",
+          "alt": "A pink grain-free cereal box of a woman in goggles riding a green parrot, the name removed"
+        },
+        {
+          "src": "img/q/2026-11-30/brands-c2-n008-a-x2.webp",
+          "alt": "An orange can of sport sunscreen spray, the brand name in its yellow badge painted over"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Magic Spoon"
+          ]
+        },
+        {
+          "accept": [
+            "Banana Boat"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Magic Spoon & Banana Boat",
+      "reveal": [
+        {
+          "src": "img/q/2026-11-30/brands-c2-n008-a-x3.webp",
+          "alt": "A box of Magic Spoon fruity grain-free cereal"
+        },
+        {
+          "src": "img/q/2026-11-30/brands-c2-n008-a-x4.webp",
+          "alt": "A can of Banana Boat Ultra Sport sunscreen spray"
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "What is the only current Atlantic Division team to never win the NBA Finals?",
+      "parts": [
+        {
+          "accept": [
+            "Brooklyn Nets",
+            "Nets",
+            "New Jersey Nets",
+            "Brooklyn",
+            "New Jersey"
+          ]
+        }
+      ],
+      "answer": "Brooklyn Nets"
+    }
+  ]
+}

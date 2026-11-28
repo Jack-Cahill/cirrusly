@@ -1,0 +1,130 @@
+{
+  "label": "#41",
+  "date": "2026-11-28",
+  "prev_date": "2026-11-27",
+  "questions": [
+    {
+      "level": 1,
+      "category": "General Knowledge",
+      "style": "typed",
+      "text": "Finish the slogan: “There are some things money can’t buy. For everything else, there’s __”",
+      "parts": [
+        {
+          "accept": [
+            "Mastercard"
+          ]
+        }
+      ],
+      "answer": "Mastercard"
+    },
+    {
+      "level": 2,
+      "category": "Language",
+      "style": "typed",
+      "text": "Identify this language: “回頭見，朋友”",
+      "parts": [
+        {
+          "accept": [
+            "Mandarin",
+            "Chinese",
+            "Mandarin Chinese",
+            "Cantonese"
+          ]
+        }
+      ],
+      "answer": "Mandarin (Chinese)"
+    },
+    {
+      "level": 3,
+      "category": "Religion & Culture",
+      "style": "typed",
+      "text": "Fill in the missing word from this Bible verse: “Blessed are the peacemakers, for they shall be called the ___ of God.” (Matthew 5:9)",
+      "parts": [
+        {
+          "accept": [
+            "Children",
+            "Sons"
+          ]
+        }
+      ],
+      "answer": "Children"
+    },
+    {
+      "level": 4,
+      "category": "Crossword",
+      "style": "typed",
+      "text": "Note-paper that’s usually yellow: L E _ _ _ _ _ _",
+      "example": "crossword",
+      "parts": [
+        {
+          "accept": [
+            "LEGALPAD",
+            "LEGAL PAD"
+          ],
+          "close": [
+            "GALPAD"
+          ],
+          "hint": "Fill in the whole answer"
+        }
+      ],
+      "joined": true,
+      "answer": "LEGALPAD"
+    },
+    {
+      "level": 5,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name the building or city it’s found in",
+      "images": [
+        {
+          "src": "img/q/2026-11-28/geography-c1-p041-c-1.webp",
+          "alt": "A very tall green tower of stacked tiers rising over a city, with mountains behind"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Taipei 101",
+            "Taipei World Financial Center",
+            "Taipei"
+          ]
+        }
+      ],
+      "answer": "Taipei 101 (Taipei)"
+    },
+    {
+      "level": 6,
+      "category": "Technology",
+      "style": "typed",
+      "text": "About a quarter of US electricity is renewable. What type of renewable energy supplies the largest share?",
+      "parts": [
+        {
+          "accept": [
+            "Wind",
+            "Wind power",
+            "Wind energy",
+            "Wind turbines"
+          ]
+        }
+      ],
+      "answer": "Wind"
+    },
+    {
+      "level": 7,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Who leads the NBA in career blocks?",
+      "parts": [
+        {
+          "accept": [
+            "Hakeem Olajuwon",
+            "Olajuwon",
+            "Akeem Olajuwon",
+            "Hakeem"
+          ]
+        }
+      ],
+      "answer": "Hakeem Olajuwon"
+    }
+  ]
+}

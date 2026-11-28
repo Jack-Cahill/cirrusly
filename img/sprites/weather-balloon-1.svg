@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 240">
+<!-- W1: classic white latex balloon, orange parachute, white sensor box -->
+<defs>
+  <radialGradient id="w1-bal" cx="0.36" cy="0.3" r="0.8"><stop offset="0" stop-color="#ffffff" stop-opacity="1"/><stop offset="1" stop-color="#c8d1de" stop-opacity="1"/></radialGradient>
+  <linearGradient id="w1-box" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#c7cfdc"/></linearGradient>
+  <linearGradient id="w1-chute" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb26b"/><stop offset="1" stop-color="#f07a2a"/></linearGradient>
+</defs>
+<path d="M70,10 C104,10 122,36 122,64 C122,92 96,114 76,124 L64,124 C44,114 18,92 18,64 C18,36 36,10 70,10 Z" fill="url(#w1-bal)"/>
+<ellipse cx="50" cy="38" rx="12" ry="6" fill="#fff" opacity="0.8" transform="rotate(-35 50 38)"/>
+<path d="M64,124 L76,124 L73,132 L67,132 Z" fill="#cfd6e2"/>
+<path d="M70,132 L70,150" stroke="#8a93a8" stroke-width="1.2"/>
+<path d="M52,160 Q70,138 88,160 Q79,156 70,160 Q61,156 52,160 Z" fill="url(#w1-chute)"/>
+<path d="M64,153 Q70,145 76,153 L76,158 Q70,156 64,158 Z" fill="#fff3e0"/>
+<path d="M52,160 L68,196 M88,160 L72,196 M70,160 L70,196" stroke="#8a93a8" stroke-width="1"/>
+<rect x="58" y="196" width="24" height="26" rx="4" fill="url(#w1-box)"/>
+<rect x="61" y="202" width="18" height="6" rx="2" fill="#ef4b45"/>
+<path d="M70,222 L70,236" stroke="#6b7390" stroke-width="1.6"/><circle cx="70" cy="236" r="1.8" fill="#6b7390"/>
+<path d="M82,212 L96,212" stroke="#6b7390" stroke-width="1.6"/><rect x="95" y="209" width="5" height="6" rx="1.5" fill="#c9d0dc"/>
+<path d="M60,199 L80,199" stroke="#fff" stroke-opacity="0.7" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

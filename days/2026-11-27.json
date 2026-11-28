@@ -1,0 +1,137 @@
+{
+  "label": "#40",
+  "date": "2026-11-27",
+  "prev_date": "2026-11-26",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Geography",
+      "style": "typed",
+      "text": "This African country’s 10 most populated cities include Johannesburg, Pretoria, and Port Elizabeth",
+      "parts": [
+        {
+          "accept": [
+            "South Africa",
+            "Republic of South Africa",
+            "RSA"
+          ],
+          "reject": [
+            "North Africa",
+            "Republic of North Africa"
+          ]
+        }
+      ],
+      "answer": "South Africa"
+    },
+    {
+      "level": 2,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name this 1990 rom-com starring Julia Roberts: a wealthy businessman hires a woman to accompany him to social events for a week and ultimately falls in love with her",
+      "parts": [
+        {
+          "accept": [
+            "Pretty Woman"
+          ]
+        }
+      ],
+      "answer": "Pretty Woman"
+    },
+    {
+      "level": 3,
+      "category": "TV",
+      "style": "typed",
+      "text": "Name this NBC TV show based on its cast: Kyle Chandler, Connie Britton, and Aimee Teegarden",
+      "parts": [
+        {
+          "accept": [
+            "Friday Night Lights",
+            "FNL"
+          ]
+        }
+      ],
+      "answer": "Friday Night Lights"
+    },
+    {
+      "level": 4,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Four-time French Open winner Iga Świątek won 6 Grand Slam titles in tennis representing what country?",
+      "parts": [
+        {
+          "accept": [
+            "Poland"
+          ],
+          "reject": [
+            "Holland"
+          ]
+        }
+      ],
+      "answer": "Poland"
+    },
+    {
+      "level": 5,
+      "category": "Mashup",
+      "style": "typed",
+      "text": "Rhyming Mashup: Comedian born in late January",
+      "example": "rhyming",
+      "parts": [
+        {
+          "accept": [
+            "Hilarious Aquarius"
+          ]
+        }
+      ],
+      "answer": "Hilarious Aquarius"
+    },
+    {
+      "level": 6,
+      "category": "Puzzles",
+      "style": "typed",
+      "text": "Identify the animal represented by the word puzzle: Arced Toss + Mix with a Spoon",
+      "parts": [
+        {
+          "accept": [
+            "Lobster"
+          ]
+        }
+      ],
+      "answer": "Lobster (Lob + Stir)"
+    },
+    {
+      "level": 7,
+      "category": "Brands & Logos",
+      "style": "multi",
+      "text": "What are the product names of these two grocery store items?",
+      "images": [
+        {
+          "src": "img/q/2026-11-27/brands-c1-n014-a-x1.webp",
+          "alt": "A bottle of original cranberry juice cocktail with a blue wave emblem, its name blanked out"
+        },
+        {
+          "src": "img/q/2026-11-27/brands-c1-n014-a-x2.webp",
+          "alt": "A green and white bag of popcorn with a popped kernel in a red and navy ring, its name blanked out"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Ocean Spray"
+          ]
+        },
+        {
+          "accept": [
+            "SkinnyPop",
+            "Skinny Pop"
+          ],
+          "reject": [
+            "Smartfood",
+            "Smart Pop"
+          ]
+        }
+      ],
+      "order": "fixed",
+      "answer": "Ocean Spray & SkinnyPop"
+    }
+  ]
+}

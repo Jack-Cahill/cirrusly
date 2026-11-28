@@ -1,0 +1,145 @@
+{
+  "label": "#42",
+  "date": "2026-11-29",
+  "prev_date": "2026-11-28",
+  "questions": [
+    {
+      "level": 1,
+      "category": "Movies",
+      "style": "typed",
+      "text": "Name the actress based off their filmography: Mamma Mia, Little Women (2019), and Sophie’s Choice",
+      "parts": [
+        {
+          "accept": [
+            "Meryl Streep",
+            "Streep",
+            "Meryl"
+          ]
+        }
+      ],
+      "answer": "Meryl Streep"
+    },
+    {
+      "level": 2,
+      "category": "Geography",
+      "style": "typed",
+      "text": "Name the building or city it’s found in",
+      "images": [
+        {
+          "src": "img/q/2026-11-29/geography-c1-p041-a-1.webp",
+          "alt": "A very tall glass skyscraper tapering to a jagged point, over a sprawling city under grey clouds"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "The Shard",
+            "Shard London Bridge",
+            "London Bridge Tower",
+            "London"
+          ]
+        }
+      ],
+      "answer": "The Shard (London)"
+    },
+    {
+      "level": 3,
+      "category": "Science",
+      "style": "typed",
+      "text": "The two main types of electric current include direct current (DC) and what else?",
+      "parts": [
+        {
+          "accept": [
+            "Alternating Current",
+            "AC",
+            "Alternating"
+          ]
+        }
+      ],
+      "answer": "Alternating Current"
+    },
+    {
+      "level": 4,
+      "category": "Food & Restaurants",
+      "style": "typed",
+      "text": "The idea of this candy is to lick the “Lik-a-Stik” and then dunk it into a packet of sugar powder, which adheres to the stick",
+      "parts": [
+        {
+          "accept": [
+            "Fun Dip",
+            "Lik-M-Aid",
+            "Lik-M-Aid Fun Dip"
+          ],
+          "close": [
+            "Wonka"
+          ],
+          "hint": "Name the product, not the maker"
+        }
+      ],
+      "answer": "Fun Dip"
+    },
+    {
+      "level": 5,
+      "category": "Retail & Fashion",
+      "style": "typed",
+      "text": "This New York founded luxury fashion house specializes in leather handbags, luggage, and accessories such as the products shown below",
+      "images": [
+        {
+          "src": "img/q/2026-11-29/retail-c2-p007-a-1.webp",
+          "alt": "A black quilted leather shoulder bag with a gold chain strap and a small hang tag"
+        },
+        {
+          "src": "img/q/2026-11-29/retail-c2-p007-a-2.webp",
+          "alt": "A white canvas tote with a faint repeating pattern, white leather handles and a hang tag"
+        }
+      ],
+      "parts": [
+        {
+          "accept": [
+            "Coach",
+            "Coach New York"
+          ]
+        }
+      ],
+      "answer": "Coach"
+    },
+    {
+      "level": 6,
+      "category": "Sports",
+      "style": "typed",
+      "text": "Name this college basketball program based on their alumni: Kelly Oubre Jr, Andrew Wiggins, and Marcus Morris",
+      "parts": [
+        {
+          "accept": [
+            "Kansas Jayhawks",
+            "Kansas",
+            "Jayhawks",
+            "KU",
+            "University of Kansas",
+            "Kansas University",
+            "Kansas U",
+            "U of Kansas"
+          ],
+          "reject": [
+            "Arkansas"
+          ]
+        }
+      ],
+      "answer": "Kansas Jayhawks"
+    },
+    {
+      "level": 7,
+      "category": "TV",
+      "style": "typed",
+      "text": "This comedy-drama follows the life of an ex-NFL player turned financial advisor for current players in Miami, Florida",
+      "parts": [
+        {
+          "accept": [
+            "Ballers"
+          ]
+        }
+      ],
+      "answer": "Ballers"
+    }
+  ]
+}
